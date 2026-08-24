@@ -51,6 +51,7 @@ console.log(ageVansh < ageZoro);
 */
 
 // Challenge (Small Coding test)
+/*
 const massVansh = 59;
 const heightVansh = 1.59;
 
@@ -69,3 +70,30 @@ if (HigherBMI === true) {
 } else {
   console.log("Body Mass Index of Zoro is greater than Vansh");
 }
+*/
+
+const firstName = "Zoro";
+const lastName = "Roronoa";
+const role = "Swordsman";
+const crewName = "Straw Hat";
+const positionInCrew = "The Right Hand of Captain";
+
+// string Form
+const info =
+  "I'm " +
+  firstName +
+  " " +
+  lastName +
+  " , the " +
+  role +
+  " of " +
+  crewName +
+  " and " +
+  positionInCrew;
+
+console.log(info);
+
+//Template Literal(Easier than string and also more efficient for this type of task only)
+const infoNew = `I'm ${firstName} ${lastName} , the ${role} of ${crewName} and ${positionInCrew}`;
+
+console.log(infoNew);
