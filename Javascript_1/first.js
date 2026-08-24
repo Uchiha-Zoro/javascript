@@ -50,7 +50,7 @@ console.log(ageVansh > ageZoro);
 console.log(ageVansh < ageZoro);
 */
 
-// Challenge (Small Coding test)
+// Challenge 1 (Small Coding test)
 /*
 const massVansh = 59;
 const heightVansh = 1.59;
@@ -72,6 +72,8 @@ if (HigherBMI === true) {
 }
 */
 
+//String and Template Literal
+/*
 const firstName = "Zoro";
 const lastName = "Roronoa";
 const role = "Swordsman";
@@ -97,3 +99,26 @@ console.log(info);
 const infoNew = `I'm ${firstName} ${lastName} , the ${role} of ${crewName} and ${positionInCrew}`;
 
 console.log(infoNew);
+*/
+
+// Challenge 2
+const massVansh = 59;
+const heightVansh = 1.59;
+
+const maassZoro = 65;
+const heightZoro = 1.69;
+
+const BMIVansh = massVansh / heightVansh ** 2; // Both have same logic but
+const BMIZoro = (maassZoro / heightZoro) * heightZoro; // Different representation
+
+console.log(BMIVansh, BMIZoro);
+
+if (BMIVansh > BMIZoro) {
+  console.log(
+    `Body Mass Index Of Vansh (${BMIVansh}) is greater than Zoro (${BMIZoro})`,
+  );
+} else {
+  console.log(
+    `Body Mass Index Of Zoro (${BMIZoro}) is greater than Vansh (${BMIVansh})`,
+  );
+}
