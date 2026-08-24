@@ -14,3 +14,9 @@ console.log(firstName);
 const PI = 3.1415; //We cannot change this variable
 
 console.log(PI);
+
+var lastName = "Patel";
+
+// lastName = "Roronoa";
+
+console.log(lastName);
