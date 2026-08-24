@@ -102,6 +102,7 @@ console.log(infoNew);
 */
 
 // Challenge 2
+/*
 const massVansh = 59;
 const heightVansh = 1.59;
 
@@ -122,3 +123,26 @@ if (BMIVansh > BMIZoro) {
     `Body Mass Index Of Zoro (${BMIZoro}) is greater than Vansh (${BMIVansh})`,
   );
 }
+*/
+
+// Type Conversion and Coercion
+
+// type conversion
+const inputYear = "1991";
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Jonas"));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+// type coercion
+console.log("I am " + 23 + " years old");
+console.log("23" - "10" - 3);
+console.log("23" * "2");
+console.log("23" / "2");
+
+let n = "1" + 1; // '11'  // + operator if we have one string it will convert the type of another value to string also
+n = n - 1; // - operator convert the string type to number type
+console.log(n);
