@@ -1,3 +1,4 @@
+// How to get Output in JS
 /*
 let js = "amazing";
 if (js === "amazing") alert("Javascript is Fun!");
@@ -5,6 +6,7 @@ if (js === "amazing") alert("Javascript is Fun!");
 console.log(40 + 8 + 23 - 10);
 */
 
+// Variable Declaration in JS
 /*
 let firstName = "Vansh"; //We can change this variable
 
@@ -25,6 +27,8 @@ var lastName = "Patel";
 console.log(lastName);
 */
 
+// Operators in JS
+/*
 const now = 2026;
 
 const ageVansh = now - 2006;
@@ -44,3 +48,24 @@ console.log(firstName + " " + lastName);
 console.log(ageVansh > ageZoro);
 
 console.log(ageVansh < ageZoro);
+*/
+
+// Challenge (Small Coding test)
+const massVansh = 59;
+const heightVansh = 1.59;
+
+const maassZoro = 65;
+const heightZoro = 1.69;
+
+const BMIVansh = massVansh / heightVansh ** 2; // Both have same logic but
+const BMIZoro = (maassZoro / heightZoro) * heightZoro; // Different representation
+
+console.log(BMIVansh, BMIZoro);
+
+const HigherBMI = BMIVansh > BMIZoro;
+
+if (HigherBMI === true) {
+  console.log("Body Mass Index of Vansh is greater than Zoro");
+} else {
+  console.log("Body Mass Index of Zoro is greater than Vansh");
+}
