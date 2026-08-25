@@ -31,17 +31,39 @@ console.log(fruitProcessor(4, 5));
 */
 
 // Function Declarations vs. Expressions
-
+/*
 // Function declaration
-function calcAge1(birthYeah) {
-  return 2037 - birthYeah;
+function calcAge1(birthYear) {
+  return 2037 - birthYear;
 }
 const age1 = calcAge1(1991);
 
 // Function expression
-const calcAge2 = function (birthYeah) {
-  return 2037 - birthYeah;
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
 };
 const age2 = calcAge2(1991);
 
 console.log(age1, age2);
+*/
+
+//Arrow fumction
+const calcAge3 = (birthYear) => 2028 - birthYear;
+const age3 = calcAge3(2006);
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear) => {
+  const age = 2028 - birthYear;
+  const retirement = 65 - age;
+  return retirement;
+};
+
+console.log(yearsUntilRetirement(2006));
+
+const yearsUntilRetirementOfPerson = (birthYear, firstName, lastName) => {
+  const age = 2028 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} ${lastName} retires in ${retirement} years`;
+};
+
+console.log(yearsUntilRetirementOfPerson(2006, "Zoro", "Roronoa"));
