@@ -12,7 +12,7 @@ const interface = "Audio"; //this will also not execute because interface it a r
 */
 
 //Function
-
+/*
 function logger() {
   console.log("My name is Roronoa Zoro");
 }
@@ -28,3 +28,20 @@ const fruitJuice = fruitProcessor(3, 2);
 console.log(fruitJuice);
 
 console.log(fruitProcessor(4, 5));
+*/
+
+// Function Declarations vs. Expressions
+
+// Function declaration
+function calcAge1(birthYeah) {
+  return 2037 - birthYeah;
+}
+const age1 = calcAge1(1991);
+
+// Function expression
+const calcAge2 = function (birthYeah) {
+  return 2037 - birthYeah;
+};
+const age2 = calcAge2(1991);
+
+console.log(age1, age2);
