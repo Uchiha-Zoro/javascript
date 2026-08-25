@@ -1,5 +1,5 @@
 // Use of Strict Mode
-
+/*
 // "use strict";
 
 let hasDriversLicense = false;
@@ -9,3 +9,22 @@ if (passTest) hasDriverLicense = true; //without strict mode we would not be abl
 if (hasDriversLicense) console.log("I can Drive :D");
 
 const interface = "Audio"; //this will also not execute because interface it a reserved keyword even though it will not give error without strictmode
+*/
+
+//Function
+
+function logger() {
+  console.log("My name is Roronoa Zoro");
+}
+
+logger();
+
+function fruitProcessor(apples, oranges) {
+  const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+  return juice;
+}
+
+const fruitJuice = fruitProcessor(3, 2);
+console.log(fruitJuice);
+
+console.log(fruitProcessor(4, 5));
