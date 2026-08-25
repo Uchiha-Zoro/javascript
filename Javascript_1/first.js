@@ -237,7 +237,7 @@ TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
 GOOD LUCK 😀
 */
-
+/*
 const scoreDolphins = (96 + 108 + 89) / 3;
 const scoreKoalas = (88 + 91 + 110) / 3;
 console.log(scoreDolphins, scoreKoalas);
@@ -267,3 +267,16 @@ if (scoreDolphins1 > scoreKoalas1 && scoreDolphins1 >= 100) {
 } else {
   console.log("No one wins the trophy 😭");
 }
+*/
+
+//The conditional (Ternary) operator
+
+const age = 23;
+// age >= 18
+//   ? console.log("I would like to drive 🚗")
+//   : console.log("I cannot drive 😭");
+
+// const drive = age >= 18 ? "can drive 🚗" : "cannot drive 😭";
+// console.log(drive);
+
+console.log(`I ${age >= 18 ? "can drive 🚗" : "cannot drive 😭"} the car`);
