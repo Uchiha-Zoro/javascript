@@ -109,7 +109,7 @@ console.log(yearsUntilRetirement(1940, "Zoro"));
 */
 
 //Challenge 1
-
+/*
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 // let scoreDolphins = calcAverage(44, 23, 71);
@@ -128,3 +128,28 @@ const checkWinner = function (avgDolphins, avgKoalas) {
   }
 };
 checkWinner(scoreDolphins, scoreKoalas);
+*/
+
+// Introduction to Arrays
+const friend1 = "Vansh";
+const friend2 = "Zoro";
+const friend3 = "Levi";
+
+const friends = ["Vansh", "Zoro", "Levi"];
+console.log(friends);
+
+const y = new Array(1991, 1984, 2008, 2020);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Captain_Levi";
+console.log(friends);
+
+const firstName = "Itachi";
+const bio = [firstName, "Uchiha", 2026 - 1990, "SwordsMan", friends];
+console.log(bio);
+console.log(bio.length);
