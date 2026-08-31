@@ -131,6 +131,7 @@ checkWinner(scoreDolphins, scoreKoalas);
 */
 
 // Introduction to Arrays
+/*
 const friend1 = "Vansh";
 const friend2 = "Zoro";
 const friend3 = "Levi";
@@ -153,3 +154,54 @@ const firstName = "Itachi";
 const bio = [firstName, "Uchiha", 2026 - 1990, "SwordsMan", friends];
 console.log(bio);
 console.log(bio.length);
+*/
+
+// Arrays
+const calcAge = function (birthYeah) {
+  return 2037 - birthYeah;
+};
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+console.log(ages);
+
+// Basic Array Operations
+const friends = ["Vansh", "Zoro", "Levi"];
+
+// Add elements
+const newLength = friends.push("Itachi");
+console.log(friends);
+console.log(newLength);
+
+friends.unshift("Erwin_Smith");
+console.log(friends);
+
+// Remove elements
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+const shift = friends.shift();
+console.log(shift);
+console.log(friends);
+
+console.log(friends.indexOf("Zoro"));
+console.log(friends.indexOf("Luffy"));
+
+friends.push(23);
+console.log(friends.includes("Zoro"));
+console.log(friends.includes("Bob"));
+console.log(friends.includes(23));
+
+if (friends.includes("Zoro")) {
+  console.log("You have a friend called Zoro");
+}
