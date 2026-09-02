@@ -209,6 +209,7 @@ if (friends.includes("Zoro")) {
 */
 
 //Challenge 2
+/*
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
@@ -218,3 +219,46 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(bills, tips, totals);
+*/
+
+// Object
+
+const vansh = {
+  firstName: "Zoro",
+  lastName: "Roronoa",
+  role: "SwordsMan",
+  hobby: "Taking Naps",
+  likes: "Booze",
+  age: 2026 - 1990,
+  friends: ["Luffy", "Sanji", "Robin"],
+};
+
+console.log(vansh);
+
+console.log(vansh.firstName); //same output
+console.log(vansh["firstName"]); //same output
+
+const nameKey = "Name";
+console.log(vansh["last" + nameKey]); //same output
+console.log(vansh[`last${nameKey}`]); //same output
+// console.log(vansh.'last' + nameKey);//gives error
+
+const interestedIn = prompt(
+  "What you want to know about Zoro from OnePiece? Choose between firstName, lastName, role, hobby, likes, age, friends",
+);
+//Undeffined is a falsy value
+if (vansh[interestedIn]) {
+  console.log(vansh[interestedIn]);
+} else {
+  console.log(
+    "Cannot provide this confidential information about Zoro!! Choose between firstName, lastName, role, hobby, likes, age, friends",
+  );
+}
+
+vansh.location = "Zoro's location is impossible to find";
+vansh["ability"] = "Zoro can cut anything";
+console.log(vansh);
+
+console.log(
+  `${vansh.firstName} ${vansh.lastName} has ${vansh.friends.length} friends, and his bestfriend is ${vansh.friends[0]}`,
+);
