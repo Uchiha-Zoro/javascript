@@ -222,7 +222,7 @@ console.log(bills, tips, totals);
 */
 
 // Object
-
+/*
 const vansh = {
   firstName: "Zoro",
   lastName: "Roronoa",
@@ -262,3 +262,14 @@ console.log(vansh);
 console.log(
   `${vansh.firstName} ${vansh.lastName} has ${vansh.friends.length} friends, and his bestfriend is ${vansh.friends[0]}`,
 );
+*/
+
+//Adding Funtions in Objects
+const zoro = {
+  calcStrength: function (swords, power) {
+    return swords * power;
+  },
+};
+
+console.log(zoro.calcStrength(3, 150));
+console.log(zoro["calcStrength"](3, 150));
