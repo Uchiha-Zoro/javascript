@@ -277,7 +277,7 @@ console.log(zoro["calcStrength"](3, 150));
 */
 
 //chanllenge 3
-
+/*
 const zoro = {
   fullName: "Zoro Roronoa",
   mass: 92,
@@ -311,4 +311,50 @@ if (zoro.bmi > sanji.bmi) {
   console.log(
     `${sanji.fullName}'s BMI (${sanji.bmi}) is higher than ${zoro.fullName}'s BMI (${zoro.bmi})`,
   );
+}
+*/
+
+// Loops
+
+for (let i = 1; i <= 10; i++) {
+  console.log(` ${i} Pushup Done`);
+}
+
+const zoro = [
+  "Zoro",
+  "Roronoa",
+  2037 - 1991,
+  "Swordsman",
+  ["Luffy", "Ichigo", "Naruto"],
+  true,
+];
+const types = [];
+
+for (let i = 0; i < zoro.length; i++) {
+  console.log(zoro[i], typeof zoro[i]);
+  types.push(typeof zoro[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+console.log("--- ONLY STRINGS ---");
+for (let i = 0; i < zoro.length; i++) {
+  if (typeof zoro[i] !== "string") continue;
+
+  console.log(zoro[i], typeof zoro[i]);
+}
+
+console.log("--- BREAK WITH NUMBER ---");
+for (let i = 0; i < zoro.length; i++) {
+  if (typeof zoro[i] === "number") break;
+
+  console.log(zoro[i], typeof zoro[i]);
 }
