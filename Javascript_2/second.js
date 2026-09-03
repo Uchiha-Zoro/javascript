@@ -315,7 +315,7 @@ if (zoro.bmi > sanji.bmi) {
 */
 
 // Loops
-
+/*
 for (let i = 1; i <= 10; i++) {
   console.log(` ${i} Pushup Done`);
 }
@@ -357,4 +357,26 @@ for (let i = 0; i < zoro.length; i++) {
   if (typeof zoro[i] === "number") break;
 
   console.log(zoro[i], typeof zoro[i]);
+}
+*/
+
+const zoro = [
+  "Zoro",
+  "Roronoa",
+  2037 - 1991,
+  "Swordsman",
+  ["Luffy", "Ichigo", "Naruto"],
+  true,
+];
+
+for (let i = zoro.length - 1; i >= 0; i--) {
+  console.log(i, zoro[i]);
+}
+
+for (let i = 1; i <= 3; i++) {
+  console.log(`---- Rep :- ${i}`);
+
+  for (let f = 1; f <= 10; f++) {
+    console.log(`${f} Pushup`);
+  }
 }
