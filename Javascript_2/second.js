@@ -359,7 +359,7 @@ for (let i = 0; i < zoro.length; i++) {
   console.log(zoro[i], typeof zoro[i]);
 }
 */
-
+/*
 const zoro = [
   "Zoro",
   "Roronoa",
@@ -379,4 +379,13 @@ for (let i = 1; i <= 3; i++) {
   for (let f = 1; f <= 10; f++) {
     console.log(`${f} Pushup`);
   }
+}
+*/
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("Congrats You rolled a 6");
 }
