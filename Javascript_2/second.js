@@ -265,6 +265,7 @@ console.log(
 */
 
 //Adding Funtions in Objects
+/*
 const zoro = {
   calcStrength: function (swords, power) {
     return swords * power;
@@ -273,3 +274,41 @@ const zoro = {
 
 console.log(zoro.calcStrength(3, 150));
 console.log(zoro["calcStrength"](3, 150));
+*/
+
+//chanllenge 3
+
+const zoro = {
+  fullName: "Zoro Roronoa",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const sanji = {
+  fullName: "Sanji Vinsmoke",
+  mass: 68,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+zoro.calcBMI();
+sanji.calcBMI();
+
+console.log(zoro.bmi, sanji.bmi);
+
+if (zoro.bmi > sanji.bmi) {
+  console.log(
+    `${zoro.fullName}'s BMI (${zoro.bmi}) is higher than ${sanji.fullName}'s BMI (${sanji.bmi})`,
+  );
+} else {
+  console.log(
+    `${sanji.fullName}'s BMI (${sanji.bmi}) is higher than ${zoro.fullName}'s BMI (${zoro.bmi})`,
+  );
+}
