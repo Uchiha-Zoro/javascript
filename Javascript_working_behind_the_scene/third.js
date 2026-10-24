@@ -120,3 +120,15 @@ const Zoro = {
 };
 
 Zoro.calcAge();
+
+const Vansh = {
+  year: 1990,
+};
+
+Vansh.calcAge = Zoro.calcAge;
+
+Vansh.calcAge();
+
+const V = Zoro.calcAge;
+
+V();
