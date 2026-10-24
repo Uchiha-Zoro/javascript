@@ -111,3 +111,12 @@ const calcAgeArrow = (birthYear) => {
 };
 
 calcAgeArrow(2000);
+
+const Zoro = {
+  year: 2006,
+  calcAge: function () {
+    console.log(2050 - this.year);
+  },
+};
+
+Zoro.calcAge();
