@@ -41,7 +41,7 @@ calcAge(1991);
 */
 
 // Hoisting and The TDZ
-
+/*
 // Variables
 console.log(me);
 // console.log(job);
@@ -93,3 +93,21 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+*/
+
+//This Keyword
+console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2050 - birthYear);
+  console.log(this);
+};
+
+calcAge(1990);
+
+const calcAgeArrow = (birthYear) => {
+  console.log(2050 - birthYear);
+  console.log(this);
+};
+
+calcAgeArrow(2000);
