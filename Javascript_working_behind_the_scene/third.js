@@ -143,10 +143,20 @@ const Zoro = {
   calcAge: function () {
     console.log(2050 - this.year);
 
+    //Solution 1
+    /*
     const self = this;
     const isMillenial = function () {
       console.log(self);
       console.log(self.year >= 1981 && self.year <= 1996);
+    };
+    isMillenial();
+    */
+
+    //Solution 2
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
     };
     isMillenial();
   },
