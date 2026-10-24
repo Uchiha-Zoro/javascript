@@ -96,6 +96,7 @@ console.log(z === window.z);
 */
 
 //This Keyword
+/*
 console.log(this);
 
 const calcAge = function (birthYear) {
@@ -132,3 +133,28 @@ Vansh.calcAge();
 const V = Zoro.calcAge;
 
 V();
+*/
+
+//function vs arrow function
+
+const Zoro = {
+  firstName: "Zoro",
+  year: 1998,
+  calcAge: function () {
+    console.log(2050 - this.year);
+
+    const isMillenial = function () {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial;
+  },
+
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+
+Zoro.greet();
+Zoro.calcAge();
