@@ -209,8 +209,20 @@ const hinata2 = {
   family: ["HIyashi", "Hanabi"],
 };
 
+//Shallow Copy
 const hinata2Copy = { ...hinata2 };
 hinata2Copy.lastName = "Uzumaki";
 hinata2Copy.family.push("Naruto", "Boruto", "Himawari");
 
 console.log(hinata2, hinata2Copy);
+
+//Deep Copy/Clone
+const hinata3 = {
+  firstName: "Hinata",
+  lastName: "Hyuga",
+  family: ["HIyashi", "Hanabi"],
+};
+
+const hinata3Clone = structuredClone(hinata3);
+hinata3Clone.family.push("Naruto", "Boruto", "Himawari");
+console.log(hinata3, hinata3Clone);
