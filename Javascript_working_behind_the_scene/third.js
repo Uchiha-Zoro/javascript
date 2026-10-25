@@ -185,7 +185,7 @@ addArrow(2, 5, 8);
 
 //Object reference in practice (Shallow Vs. Deep Copies)
 
-const hinata = {
+const hinata1 = {
   firstName: "Hinata",
   lastName: "Hyuga",
 };
@@ -195,10 +195,21 @@ function marryPerson(originalPerson, newLastName) {
   return originalPerson;
 }
 
-const marriedHinata = marryPerson(hinata, "Uzumaki");
+const marriedHinata = marryPerson(hinata1, "Uzumaki");
 
-// const marriedHinata = hinata;
+// const marriedHinata = hinata1;
 // marriedHinata.lastName = "Usumaki";
 
-console.log("Before:", hinata);
+console.log("Before:", hinata1);
 console.log("After", marriedHinata);
+
+const hinata2 = {
+  firstName: "Hinata",
+  lastName: "Hyuga",
+  family: ["Boruto", "Himawari"],
+};
+
+const hinata2Copy = { ...hinata2 };
+hinata2Copy.lastName = "Uzumaki";
+
+console.log(hinata2, hinata2Copy);
