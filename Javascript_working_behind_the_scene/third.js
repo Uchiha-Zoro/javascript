@@ -184,7 +184,7 @@ addArrow(2, 5, 8);
 */
 
 //Object reference in practice (Shallow Vs. Deep Copies)
-
+/*
 const hinata1 = {
   firstName: "Hinata",
   lastName: "Hyuga",
@@ -226,3 +226,4 @@ const hinata3 = {
 const hinata3Clone = structuredClone(hinata3);
 hinata3Clone.family.push("Naruto", "Boruto", "Himawari");
 console.log(hinata3, hinata3Clone);
+*/
