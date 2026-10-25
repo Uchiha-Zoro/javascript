@@ -190,8 +190,15 @@ const hinata = {
   lastName: "Hyuga",
 };
 
-const marriedHinata = hinata;
-marriedHinata.lastName = "Usumaki";
+function marryPerson(originalPerson, newLastName) {
+  originalPerson.lastName = newLastName;
+  return originalPerson;
+}
+
+const marriedHinata = marryPerson(hinata, "Uzumaki");
+
+// const marriedHinata = hinata;
+// marriedHinata.lastName = "Usumaki";
 
 console.log("Before:", hinata);
 console.log("After", marriedHinata);
