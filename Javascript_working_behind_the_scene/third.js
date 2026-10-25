@@ -206,10 +206,11 @@ console.log("After", marriedHinata);
 const hinata2 = {
   firstName: "Hinata",
   lastName: "Hyuga",
-  family: ["Boruto", "Himawari"],
+  family: ["HIyashi", "Hanabi"],
 };
 
 const hinata2Copy = { ...hinata2 };
 hinata2Copy.lastName = "Uzumaki";
+hinata2Copy.family.push("Naruto", "Boruto", "Himawari");
 
 console.log(hinata2, hinata2Copy);
