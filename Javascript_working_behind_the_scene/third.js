@@ -136,7 +136,7 @@ V();
 */
 
 //function vs arrow function
-
+/*
 const Zoro = {
   firstName: "Zoro",
   year: 1995,
@@ -144,14 +144,12 @@ const Zoro = {
     console.log(2050 - this.year);
 
     //Solution 1
-    /*
-    const self = this;
-    const isMillenial = function () {
-      console.log(self);
-      console.log(self.year >= 1981 && self.year <= 1996);
-    };
-    isMillenial();
-    */
+    // const self = this;
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+    // isMillenial();
 
     //Solution 2
     const isMillenial = () => {
@@ -183,3 +181,17 @@ var addArrow = (a, b) => {
   return a + b;
 };
 addArrow(2, 5, 8);
+*/
+
+//Object reference in practice (Shallow Vs. Deep Copies)
+
+const hinata = {
+  firstName: "Hinata",
+  lastName: "Hyuga",
+};
+
+const marriedHinata = hinata;
+marriedHinata.lastName = "Usumaki";
+
+console.log("Before:", hinata);
+console.log("After", marriedHinata);
