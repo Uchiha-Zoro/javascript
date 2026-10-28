@@ -25,7 +25,29 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = "20:00",
+    address,
+  }) {
+    console.log(
+      `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
+    );
+  },
 };
+
+restaurant.orderDelivery({
+  time: "22:30",
+  address: "one Piece the land of wano in new world",
+  starterIndex: 2,
+  mainIndex: 0,
+});
+
+restaurant.orderDelivery({
+  address: "one Piece elbaph in new world",
+});
 
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
