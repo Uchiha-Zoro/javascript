@@ -49,6 +49,14 @@ const restaurant = {
   },
 };
 
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+//With Optional Chaining
+console.log(restaurant.openingHours.mon?.open);
+
+// For of Loop
+/*
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 for (const item of menu) console.log(item);
@@ -56,6 +64,7 @@ for (const item of menu) console.log(item);
 for (const [i, j] of menu.entries()) {
   console.log(`${i + 1}: ${j}`);
 }
+*/
 
 //Logical Assignment Oprator
 /*
