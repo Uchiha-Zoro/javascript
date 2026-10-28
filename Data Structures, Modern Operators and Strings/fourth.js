@@ -45,6 +45,18 @@ console.log(badNewArr);
 const newArr = [1, 2, ...arr];
 console.log(newArr);
 
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, "Gnocci"];
+console.log(newMenu);
+
+//Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//Join 2 arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+
 //Destructuring Objects
 /*
 restaurant.orderDelivery({
