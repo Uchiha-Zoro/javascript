@@ -40,6 +40,19 @@ console.log(restaurantName, hours, tags);
 const { menu = [], starterMenu: starters = [] } = restaurant;
 console.log(menu, starters);
 
+//Mutating Variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 9 };
+({ a, b } = obj);
+console.log(a, b);
+
+//Nested Objects
+const {
+  fri: { open: o, close: c },
+} = openingHours;
+console.log(o, c);
+
 //Destructuring Array
 /*
 // const arr = [2, 3, 4];
