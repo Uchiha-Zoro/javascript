@@ -42,9 +42,21 @@ const restaurant = {
       `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`,
     );
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
+//use any data type, return any data type, shoer-circuiting
+console.log(3 || "Zoro");
+console.log("" || "Zoro");
+console.log(true || 0);
+console.log(undefined || null);
+
 //Rest Pattern and Parameters
+/*
 const [a, b, ...others] = [1, 2, 3, 4, 5];
 console.log(a, b, others);
 
@@ -67,6 +79,10 @@ add(1, 2, 3, 4, 5, 6, 7, 8, 9, 111, 2, 2, 3, 34, 4);
 
 const x = [23, 34, 58, 92, 45];
 add(...x);
+
+restaurant.orderPizza("Mushrooms", "olives", "onion", "spinach");
+restaurant.orderPizza("Mushrooms");
+*/
 
 //Spread Operator
 /*
