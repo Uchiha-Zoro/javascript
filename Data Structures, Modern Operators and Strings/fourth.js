@@ -49,6 +49,16 @@ const restaurant = {
   },
 };
 
+restaurant.numGuests = 0;
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+//Nullish: null and undefined (NOT include 0 and ' ' )
+const guestsCorrect = restaurant.numGuests ?? 10;
+console.log(guestsCorrect);
+
+//Short Circuiting
+/*
 console.log("----OR----");
 //use any data type, return any data type, shoer-circuiting
 console.log(3 || "Zoro");
@@ -77,6 +87,7 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza("Mushrooms", "spinach");
+*/
 
 //Rest Pattern and Parameters
 /*
