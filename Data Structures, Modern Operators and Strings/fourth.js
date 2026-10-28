@@ -27,6 +27,9 @@ const restaurant = {
   },
 };
 
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
 //Destructuring Array
 /*
 // const arr = [2, 3, 4];
