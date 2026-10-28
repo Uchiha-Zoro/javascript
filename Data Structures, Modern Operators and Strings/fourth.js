@@ -57,6 +57,17 @@ console.log(first, second, otherFood);
 const { sat, ...weekdays } = restaurant.openingHours;
 console.log(weekdays);
 
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
+
+add(1, 2, 3, 4, 5, 6, 7, 8, 9, 111, 2, 2, 3, 34, 4);
+
+const x = [23, 34, 58, 92, 45];
+add(...x);
+
 //Spread Operator
 /*
 const arr = [7, 8, 9];
