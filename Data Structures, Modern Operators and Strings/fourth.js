@@ -49,6 +49,14 @@ const restaurant = {
   },
 };
 
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+for (const [i, j] of menu.entries()) {
+  console.log(`${i + 1}: ${j}`);
+}
+
 //Logical Assignment Oprator
 /*
 const rest1 = {
@@ -301,6 +309,7 @@ console.log(m, n, o);
 /////////////////////////////////////////////
 
 //Challenge #1
+/*
 const game = {
   team1: "Bayern Munich",
   team2: "Borrussia Dortmund",
@@ -370,3 +379,4 @@ printGoals(...game.scored);
 
 team1 < team2 && console.log("Team 1 is more likely to win");
 team2 < team1 && console.log("Team 1 is more likely to win");
+*/
