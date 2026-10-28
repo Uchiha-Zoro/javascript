@@ -38,6 +38,15 @@ const restaurant = {
   },
 };
 
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+//Destructuring Objects
+/*
 restaurant.orderDelivery({
   time: "22:30",
   address: "one Piece the land of wano in new world",
@@ -74,6 +83,7 @@ const {
   fri: { open: o, close: c },
 } = openingHours;
 console.log(o, c);
+*/
 
 //Destructuring Array
 /*
