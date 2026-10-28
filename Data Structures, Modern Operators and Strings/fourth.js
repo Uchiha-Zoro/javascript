@@ -49,6 +49,25 @@ const restaurant = {
   },
 };
 
+const properties = Object.keys(restaurant.openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days : `;
+
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+
+console.log(openStr);
+
+const values = Object.values(restaurant.openingHours);
+console.log(values);
+
+const entries = Object.entries(restaurant.openingHours);
+console.log(entries);
+
+//Optional Chaining
+/*
 if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 
@@ -72,6 +91,7 @@ console.log(restaurant.Zoro?.(0, 2) ?? "Method does not exist");
 const users = [{ name: "Zoro", email: "Roronoa@gmail.com" }];
 console.log(users[0]?.name ?? "Users array empty");
 console.log(users[0]?.location ?? "Users Is Lost, Impossible to find");
+*/
 
 // For of Loop
 /*
