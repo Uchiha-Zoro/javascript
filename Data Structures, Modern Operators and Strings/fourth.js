@@ -68,6 +68,11 @@ for (const day of days) {
 console.log(restaurant.order?.(0, 2) ?? "Method does not exist");
 console.log(restaurant.Zoro?.(0, 2) ?? "Method does not exist");
 
+//array
+const users = [{ name: "Zoro", email: "Roronoa@gmail.com" }];
+console.log(users[0]?.name ?? "Users array empty");
+console.log(users[0]?.location ?? "Users Is Lost, Impossible to find");
+
 // For of Loop
 /*
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
