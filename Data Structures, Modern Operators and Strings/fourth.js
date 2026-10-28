@@ -49,6 +49,7 @@ const restaurant = {
   },
 };
 
+console.log("----OR----");
 //use any data type, return any data type, shoer-circuiting
 console.log(3 || "Zoro");
 console.log("" || "Zoro");
@@ -63,6 +64,19 @@ console.log(guests1);
 
 const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
+
+console.log("----AND----");
+console.log(0 && "Zoro");
+console.log(7 && "Zoro");
+
+console.log("Hello" && 23 && null && "Zoro");
+
+//Practitcal Example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza("Mushrooms", "spinach");
+}
+
+restaurant.orderPizza && restaurant.orderPizza("Mushrooms", "spinach");
 
 //Rest Pattern and Parameters
 /*
