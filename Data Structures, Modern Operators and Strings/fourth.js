@@ -54,6 +54,9 @@ const [first, , second, ...otherFood] = [
 ];
 console.log(first, second, otherFood);
 
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
 //Spread Operator
 /*
 const arr = [7, 8, 9];
