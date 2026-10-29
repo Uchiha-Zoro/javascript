@@ -85,6 +85,21 @@ console.log(Object.entries(restaurant.openingHours));
 const hoursMap = new Map(Object.entries(restaurant.openingHours));
 console.log(hoursMap);
 
+console.log(question.get("question"));
+for (const [key, value] of question) {
+  if (typeof key === "number") console.log(`Answer ${key}: ${value}`);
+}
+const answer = Number(prompt("Your Answer :"));
+console.log(answer);
+
+console.log(question.get(question.get("Correct") === answer));
+
+//Map to Array
+console.log(...question);
+console.log([...question.entries()]);
+console.log([...question.keys()]);
+console.log([...question.values()]);
+
 //Maps
 
 //Maps: Fundamentals
