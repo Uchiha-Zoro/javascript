@@ -70,7 +70,24 @@ const restaurant = {
   },
 };
 
+//Maps
+const rest = new Map();
+rest.set("name", "Baratie");
+rest.set(1, "East Blue");
+console.log(rest.set(2, "New World beyond Grand Line"));
+
+rest
+  .set("categories", ["Italian", "Pizzeria", "Vegetarian", "Organic"])
+  .set("open", 11)
+  .set("close", 23)
+  .set(true, "We are open :D")
+  .set(false, "We are closed :(");
+
+console.log(rest.get("name"));
+console.log(rest.get(true));
+
 //Sets in Detail
+/*
 const commonFoods = italianFoods.intersection(mexicanFoods);
 console.log("Intersection:", commonFoods);
 console.log([...commonFoods]);
@@ -91,6 +108,7 @@ const uniqueItalianAndMexicanFoods =
 console.log(uniqueItalianAndMexicanFoods);
 
 console.log(italianFoods.isDisjointFrom(mexicanFoods));
+*/
 
 //Sets Basics
 /*
