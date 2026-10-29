@@ -69,8 +69,20 @@ console.log(ordersSet.has("Bread"));
 ordersSet.add("Garlic Bread");
 ordersSet.add("Garlic Bread");
 ordersSet.delete("Risotto");
+// ordersSet.clear();
 
 console.log(ordersSet);
+
+for (const order of ordersSet) console.log(order);
+
+const staff = ["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"];
+
+// const staffUnique = new Set(staff);
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+console.log(new Set(staff).size);
+
+console.log(new Set("ZoroRoronoa"));
 
 //Looping Objects Object Keys, Values and Entries
 /*
