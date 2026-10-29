@@ -107,6 +107,11 @@ checkMiddleSeat("11B");
 checkMiddleSeat("23C");
 checkMiddleSeat("3E");
 
+console.log(new String("Roronoa"));
+console.log(typeof new String("Roronoa"));
+
+console.log(typeof new String("Roronoa").slice(1));
+
 //Maps Iteration
 /*
 const question = new Map([
