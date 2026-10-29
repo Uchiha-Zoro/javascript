@@ -66,6 +66,12 @@ console.log(ordersSet.size);
 console.log(ordersSet.has("Pizza"));
 console.log(ordersSet.has("Bread"));
 
+ordersSet.add("Garlic Bread");
+ordersSet.add("Garlic Bread");
+ordersSet.delete("Risotto");
+
+console.log(ordersSet);
+
 //Looping Objects Object Keys, Values and Entries
 /*
 const properties = Object.keys(restaurant.openingHours);
