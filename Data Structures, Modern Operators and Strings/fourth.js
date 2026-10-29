@@ -80,6 +80,18 @@ console.log("Union:", unCommonFoods);
 console.log([...unCommonFoods]);
 console.log([...new Set([...italianFoods, ...mexicanFoods])]);
 
+const uniqueItalianFoods = italianFoods.difference(mexicanFoods);
+console.log("UniqueItalianFoods:", uniqueItalianFoods);
+
+const uniqueMexicanFoods = mexicanFoods.difference(italianFoods);
+console.log("UniqueMexicanFoods:", uniqueMexicanFoods);
+
+const uniqueItalianAndMexicanFoods =
+  italianFoods.symmetricDifference(mexicanFoods);
+console.log(uniqueItalianAndMexicanFoods);
+
+console.log(italianFoods.isDisjointFrom(mexicanFoods));
+
 //Sets Basics
 /*
 const ordersSet = new Set([
