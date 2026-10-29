@@ -90,6 +90,25 @@ const passengerNameCorrection = function (name) {
 
 console.log(passengerNameCorrection("zOrO"));
 
+const email = "hello@vansh.io";
+const loginEmail = "  Hello@vaNsH.Io";
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+console.log(email === normalizedEmail);
+
+const emailValidation = (correctEmail, toVerifyEmail) => {
+  const verifiedEmail = toVerifyEmail.toLowerCase().trim();
+  console.log(correctEmail, verifiedEmail);
+  console.log(correctEmail === verifiedEmail);
+};
+
+emailValidation("zoro@roronoa.io", "   zOrO@RoRoNoA.IO");
+
 //Working with Strings 1
 /*
 const airline = "TAP Air Portugal";
