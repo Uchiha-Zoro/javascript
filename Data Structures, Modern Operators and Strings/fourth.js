@@ -70,7 +70,25 @@ const restaurant = {
   },
 };
 
+const question = new Map([
+  ["question", "What is the best programming languagecin the world?"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "Javascript"],
+  ["Correct", 3],
+  [true, "Correct 🎉"],
+  [false, "Try again!"],
+]);
+console.log(question);
+
+console.log(Object.entries(restaurant.openingHours));
+const hoursMap = new Map(Object.entries(restaurant.openingHours));
+console.log(hoursMap);
+
 //Maps
+
+//Maps: Fundamentals
+/*
 const rest = new Map();
 rest.set("name", "Baratie");
 rest.set(1, "East Blue");
@@ -101,6 +119,7 @@ console.log(rest);
 console.log(rest.size);
 
 console.log(rest.get(arr));
+*/
 
 //Sets in Detail
 /*
