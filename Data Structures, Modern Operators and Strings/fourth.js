@@ -894,4 +894,15 @@ GOOD LUCK 😀
 
 document.body.append(document.createElement("textarea"));
 document.body.append(document.createElement("button"));
-const text = document.querySelector("textarea").value;
+
+document.querySelector("button").addEventListener("click", function () {
+  const text = document.querySelector("textarea").value;
+  const rows = text.split("\n");
+
+  for (const [i, n] of rows.entries()) {
+    const [first, second] = n.toLowerCase().trim().split("_");
+    const outputStr = `${first}${second.replace(second[0], second[0].toUpperCase())}`;
+
+    console.log(`${outputStr.padEnd(20)}${"✅".repeat(i + 1)}`);
+  }
+});
