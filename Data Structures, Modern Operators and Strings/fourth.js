@@ -70,7 +70,28 @@ const restaurant = {
   },
 };
 
+//Working with Strings 2
+
+const airline = "TAp Air Portugal";
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+const passenger = "kAkASHi";
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+
+console.log(passengerCorrect);
+
+const passengerNameCorrection = function (name) {
+  const lower = name.toLowerCase();
+  return lower[0].toUpperCase() + lower.slice(1);
+};
+
+console.log(passengerNameCorrection("zOrO"));
+
 //Working with Strings 1
+/*
 const airline = "TAP Air Portugal";
 const plane = "A320";
 
@@ -111,6 +132,7 @@ console.log(new String("Roronoa"));
 console.log(typeof new String("Roronoa"));
 
 console.log(typeof new String("Roronoa").slice(1));
+*/
 
 //Maps Iteration
 /*
