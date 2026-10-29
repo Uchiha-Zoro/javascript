@@ -70,6 +70,25 @@ const restaurant = {
   },
 };
 
+//Working with Strings 1
+const airline = "TAP Air Portugal";
+const plane = "A320";
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log("B737"[0]);
+
+console.log(airline.length);
+console.log("B737".length);
+
+console.log(airline.indexOf("r"));
+console.log(airline.lastIndexOf("r"));
+console.log(airline.indexOf("Portugal"));
+console.log(airline.indexOf("portugal"));
+
+console.log(airline.slice(4));
+
 //Maps Iteration
 /*
 const question = new Map([
@@ -658,6 +677,7 @@ Let's continue with our football betting app! This time, we have a map with a lo
 GOOD LUCK 😀
 */
 
+/*
 const gameEvents = new Map([
   [17, "⚽️ GOAL"],
   [36, "🔁 Substitution"],
@@ -691,3 +711,4 @@ for (const [min, event] of gameEvents) {
   const half = min <= 45 ? "First" : "Second";
   console.log(`[${half} Half] ${min}: ${event}`);
 }
+*/
