@@ -59,7 +59,7 @@ console.log(zoro);
 */
 
 //Functions Accepting Callback Functions
-
+/*
 const oneWord = function (str) {
   return str.replaceAll(" ", "").toLowerCase();
 };
@@ -87,3 +87,15 @@ const high5 = function () {
 document.body.addEventListener("click", high5);
 
 ["Luffy", "Zoro", "Sanji"].forEach(high5);
+*/
+
+//Functions returing function
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting}: ${name}`);
+  };
+};
+
+const greetHey = greet("Hey");
+greetHey("Zoro");
+greetHey("Vansh");
