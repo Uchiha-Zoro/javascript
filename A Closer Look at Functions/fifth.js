@@ -27,6 +27,7 @@ createBooking("AC123", undefined, 1000);
 */
 
 //How passing arguments works values vs reference
+/*
 const flight = "LH123";
 const zoro = {
   name: "Zoro Roronoa",
@@ -55,3 +56,15 @@ const newPassport = function (person) {
 newPassport(zoro);
 checkIn(flight, zoro);
 console.log(zoro);
+*/
+
+//Functions Accepting Callback Functions
+
+const oneWord = function (str) {
+  return str.replaceAll(" ", "").toLowerCase();
+};
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(" ");
+  return [first.toUpperCase(), ...others].join(" ");
+};
