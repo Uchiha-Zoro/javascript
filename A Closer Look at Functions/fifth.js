@@ -152,3 +152,13 @@ book.apply(swiss, flightData);
 console.log(swiss);
 
 book.call(swiss, ...flightData);
+
+// Bind Method
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+
+bookEW(23, "Naruto");
+
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23("Vansh Patel");
