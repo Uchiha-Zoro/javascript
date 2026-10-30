@@ -276,8 +276,20 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, "string");
 const runOnce = function () {
   console.log("I will never run agian");
 };
-runOnce();
+// runOnce();
 
 (function () {
   console.log("I will never run again");
+  const isPrivate = 23;
 })();
+// console.log(isPrivate);
+
+(() => console.log("I will also never run again"))();
+
+{
+  const isPrivate = 23;
+  var notPrivate = 46;
+}
+
+// console.log(isPrivate);
+console.log(notPrivate);
