@@ -272,7 +272,7 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, "string");
 */
 
 //Immediately Invoked Function EXpressions
-
+/*
 const runOnce = function () {
   console.log("I will never run agian");
 };
@@ -293,3 +293,21 @@ const runOnce = function () {
 
 // console.log(isPrivate);
 console.log(notPrivate);
+*/
+
+//Closures
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
