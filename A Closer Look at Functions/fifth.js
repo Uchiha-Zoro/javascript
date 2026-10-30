@@ -162,3 +162,15 @@ bookEW(23, "Naruto");
 
 const bookEW23 = book.bind(eurowings, 23);
 bookEW23("Vansh Patel");
+
+//With Event Listner
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+
+  this.planes++;
+  console.log(this.planes);
+};
+document
+  .querySelector(".buy")
+  .addEventListener("click", lufthansa.buyPlane.bind(lufthansa));
