@@ -90,6 +90,7 @@ document.body.addEventListener("click", high5);
 */
 
 //Functions returing function
+/*
 // const greet = function (greeting) {
 //   return function (name) {
 //     console.log(`${greeting}: ${name}`);
@@ -103,3 +104,20 @@ greetHey("Zoro");
 greetHey("Vansh");
 
 greet("Hello")("Gojo");
+*/
+
+const lufthansa = {
+  airline: "Lufthansa",
+  iataCode: "LH",
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`,
+    );
+    this.bookings.push({ flight: `${this.iataCode} ${flightNum}`, name });
+  },
+};
+
+lufthansa.book(239, "Gojo Satoru");
+lufthansa.book(240, "Utahime Iori");
+console.log(lufthansa);
