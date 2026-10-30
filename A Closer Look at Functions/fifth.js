@@ -145,4 +145,10 @@ const swiss = {
 
 book.call(swiss, 583, "Giyu Tomioka");
 book.call(swiss, 583, "Shinobu Kocho");
+
+// Apply Method
+const flightData = [583, "Douma Upper Moon 2"];
+book.apply(swiss, flightData);
 console.log(swiss);
+
+book.call(swiss, ...flightData);
