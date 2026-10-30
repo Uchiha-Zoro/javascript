@@ -122,7 +122,7 @@ lufthansa.book(239, "Gojo Satoru");
 lufthansa.book(240, "Utahime Iori");
 
 const eurowings = {
-  name: "Eurowings",
+  airline: "Eurowings",
   iataCode: "EW",
   bookings: [],
 };
@@ -130,8 +130,19 @@ const eurowings = {
 const book = lufthansa.book;
 // book(23, "Sukuna");
 
+// Call Method
 book.call(eurowings, 23, "Sukuna");
 console.log(eurowings);
 
 book.call(lufthansa, 239, "Toji Zenin");
 console.log(lufthansa);
+
+const swiss = {
+  airline: "Swiss Air Lines",
+  iataCode: "LX",
+  bookings: [],
+};
+
+book.call(swiss, 583, "Giyu Tomioka");
+book.call(swiss, 583, "Shinobu Kocho");
+console.log(swiss);
