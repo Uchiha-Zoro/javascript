@@ -230,6 +230,7 @@ BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
 GOOD LUCK 😀
 */
 
+/*
 const poll = {
   question: "What is your favourite programming language?",
   options: ["0: JavaScript", "1: Python", "2: Rust", "3: C++"],
@@ -268,3 +269,15 @@ poll.displayResults.call({ answers: [5, 2, 3] });
 poll.displayResults.call({ answers: [5, 2, 3] }, "string");
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, "string");
+*/
+
+//Immediately Invoked Function EXpressions
+
+const runOnce = function () {
+  console.log("I will never run agian");
+};
+runOnce();
+
+(function () {
+  console.log("I will never run again");
+})();
