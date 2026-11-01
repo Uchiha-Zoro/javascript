@@ -78,11 +78,13 @@ const displayMovements = function (movements) {
 displayMovements(account1.movements);
 
 const user = "Monkey D Luffy";
-const userName = user.toLowerCase().split(" ");
+const userName = user
+  .toLowerCase()
+  .split(" ")
+  .map((name) => name[0])
+  .join("");
 
-const realUserName = userName.map((element) => element.slice(0, 1));
-
-console.log(realUserName.join(""));
+console.log(userName);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // LECTURES
