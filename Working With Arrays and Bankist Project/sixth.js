@@ -18,14 +18,14 @@ const account2 = {
 };
 
 const account3 = {
-  owner: "Luffy D Monkey",
+  owner: "Monkey D Luffy",
   movements: [200, -200, 340, -300, -20, 50, 400, -460],
   interestRate: 0.7,
   pin: 3333,
 };
 
 const account4 = {
-  owner: "Hancock Boa",
+  owner: "Boa Hancock",
   movements: [430, 1000, 700, 50, 90],
   interestRate: 1,
   pin: 4444,
@@ -76,6 +76,13 @@ const displayMovements = function (movements) {
   });
 };
 displayMovements(account1.movements);
+
+const user = "Monkey D Luffy";
+const userName = user.toLowerCase().split(" ");
+
+const realUserName = userName.map((element) => element.slice(0, 1));
+
+console.log(realUserName.join(""));
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // LECTURES
@@ -156,6 +163,7 @@ console.log(movementsDescriptions);
 */
 
 // Filter Method
+/*
 const deposits = movements.filter(function (mov, i, arr) {
   return mov > 0;
 });
@@ -170,6 +178,7 @@ console.log(depositsFor);
 const withdrawals = movements.filter((mov) => mov < 0);
 
 console.log(withdrawals);
+*/
 
 //////////////////////////////////////////
 /*
