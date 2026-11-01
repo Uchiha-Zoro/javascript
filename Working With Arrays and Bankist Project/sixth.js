@@ -208,6 +208,13 @@ for (const mov of movements) balance2 += mov;
 console.log(balance2);
 */
 
+// More About Reduce Method
+const max = movements.reduce(
+  (acc, mov) => (acc > mov ? acc : mov),
+  movements[0],
+);
+console.log(max);
+
 //////////////////////////////////////////
 /*
 let arr = ["a", "b", "c", "d", "e"];
