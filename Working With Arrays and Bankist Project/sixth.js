@@ -77,16 +77,18 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
-const createUserName = function (user) {
-  const userName = user
-    .toLowerCase()
-    .split(" ")
-    .map((name) => name[0])
-    .join("");
-  return userName;
+const createUserName = function (accs) {
+  accs.forEach(function (acc) {
+    acc.userName = acc.owner
+      .toLowerCase()
+      .split(" ")
+      .map((name) => name[0])
+      .join("");
+  });
 };
 
-console.log(createUserName("Monkey D Luffy"));
+createUserName(accounts);
+console.log(accounts);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // LECTURES
