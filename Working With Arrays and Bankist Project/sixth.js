@@ -77,14 +77,16 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
-const user = "Monkey D Luffy";
-const userName = user
-  .toLowerCase()
-  .split(" ")
-  .map((name) => name[0])
-  .join("");
+const createUserName = function (user) {
+  const userName = user
+    .toLowerCase()
+    .split(" ")
+    .map((name) => name[0])
+    .join("");
+  return userName;
+};
 
-console.log(userName);
+console.log(createUserName("Monkey D Luffy"));
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // LECTURES
