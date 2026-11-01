@@ -77,6 +77,13 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} €`;
+};
+
+calcDisplayBalance(account1.movements);
+
 const createUserName = function (accs) {
   accs.forEach(function (acc) {
     acc.userName = acc.owner
@@ -186,7 +193,7 @@ console.log(withdrawals);
 */
 
 // Reduce Method
-
+/*
 console.log(movements);
 
 // const balance = movements.reduce(function (acc, cur, i, arr) {
@@ -199,6 +206,7 @@ console.log(balance);
 let balance2 = 0;
 for (const mov of movements) balance2 += mov;
 console.log(balance2);
+*/
 
 //////////////////////////////////////////
 /*
