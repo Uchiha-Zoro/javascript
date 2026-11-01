@@ -72,8 +72,8 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // Working with bank acoount data above //
 //////////////////////////////////////////
 
-// FOREACH loop
-
+// FOREACH loop on arrays
+/*
 // for (const movement of movements) {
 for (const [i, movement] of movements.entries()) {
   if (movement > 0) {
@@ -91,6 +91,24 @@ movements.forEach(function (mov, i, arr) {
   } else {
     console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
   }
+});
+*/
+
+// ForEach loop on maps and sets
+
+currencies.forEach(function (value, key, amp) {
+  console.log(`${key}: ${value}`);
+});
+
+const currenciesUnique = new Set(["USD", "GBP", "USD", "EUR", "EUR"]);
+console.log(currenciesUnique);
+
+// currenciesUnique.forEach(function (value, key, map) {
+//   console.log(`${key}: ${value}`);
+// });
+
+currenciesUnique.forEach(function (value, _, map) {
+  console.log(`${value}: ${value}`);
 });
 
 //////////////////////////////////////////
