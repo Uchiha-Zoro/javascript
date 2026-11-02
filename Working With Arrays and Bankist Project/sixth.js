@@ -473,6 +473,8 @@ console.log("Zoro".at(-1));
 
 // Flat and Flatmap method
 
+// Flat Method
+/*
 const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
 console.log(arr.flat());
 
@@ -493,6 +495,14 @@ const overAllBalance = accounts
   .flat()
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overAllBalance);
+*/
+
+// Flatmap Method
+
+const overAllBalance2 = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overAllBalance2);
 
 ///////////////////////////////////////
 // Coding Challenge #1
