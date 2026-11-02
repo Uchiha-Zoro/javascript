@@ -361,7 +361,7 @@ if (!acc) console.log(`No such account found`);
 */
 
 // FindLast Method and FindLastIndex Method
-
+/*
 console.log(movements);
 
 const lastWithdrawal = movements.findLast((mov) => mov < 0);
@@ -372,6 +372,17 @@ console.log(lastWithdrawalIndex);
 console.log(
   `Your lastest withdrawal movement was ${movements.length - lastWithdrawalIndex} movements ago`,
 );
+*/
+
+// Some and Every Method
+
+console.log(movements);
+
+console.log(movements.includes(-130));
+
+console.log(movements.some((mov) => mov === -130));
+
+console.log(movements.some((mov) => mov > 0));
 
 //////////////////////////////////////////
 /*
