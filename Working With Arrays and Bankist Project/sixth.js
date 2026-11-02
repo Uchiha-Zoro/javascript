@@ -239,6 +239,15 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // Working with lectures data above //////
 //////////////////////////////////////////
 
+// Array Grouping
+
+console.log(movements);
+
+const groupedMovements = Object.groupBy(movements, (movement) =>
+  movement > 0 ? "Deposits" : "Withdrawals",
+);
+console.log(groupedMovements);
+
 // FOREACH loop on arrays
 /*
 // for (const movement of movements) {
