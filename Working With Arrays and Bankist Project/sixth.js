@@ -481,11 +481,17 @@ console.log(arrDeep.flat());
 console.log(arrDeep.flat(1));
 console.log(arrDeep.flat(2));
 
-const accountMovements = accounts.map((acc) => acc.movements);
-console.log(accountMovements);
-const allMovements = accountMovements.flat();
-console.log(allMovements);
-const overAllBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+// const accountMovements = accounts.map((acc) => acc.movements);
+// console.log(accountMovements);
+// const allMovements = accountMovements.flat();
+// console.log(allMovements);
+// const overAllBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+// console.log(overAllBalance);
+
+const overAllBalance = accounts
+  .map((acc) => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
 console.log(overAllBalance);
 
 ///////////////////////////////////////
