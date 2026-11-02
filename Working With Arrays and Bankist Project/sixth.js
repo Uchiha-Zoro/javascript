@@ -360,6 +360,19 @@ for (const name of accounts) {
 if (!acc) console.log(`No such account found`);
 */
 
+// FindLast Method and FindLastIndex Method
+
+console.log(movements);
+
+const lastWithdrawal = movements.findLast((mov) => mov < 0);
+console.log(lastWithdrawal);
+
+const lastWithdrawalIndex = movements.findLastIndex((mov) => mov < 0);
+console.log(lastWithdrawalIndex);
+console.log(
+  `Your lastest withdrawal movement was ${movements.length - lastWithdrawalIndex} movements ago`,
+);
+
 //////////////////////////////////////////
 /*
 let arr = ["a", "b", "c", "d", "e"];
