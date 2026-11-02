@@ -394,6 +394,7 @@ console.log(
 */
 
 // Some and Every Method
+// Some
 /*
 console.log(movements);
 
@@ -403,6 +404,12 @@ console.log(movements.some((mov) => mov === -130));
 
 console.log(movements.some((mov) => mov > 0));
 */
+
+// Every
+
+console.log(movements.every((mov) => mov > 0));
+
+console.log(account4.movements.every((mov) => mov > 0));
 
 //////////////////////////////////////////
 /*
