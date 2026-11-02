@@ -257,6 +257,18 @@ const totalDepositsUSD = movements
 console.log(totalDepositsUSD);
 */
 
+// Find Method
+
+const firstWithdrawal = movements.find((mov) => mov < 0);
+
+console.log(movements);
+console.log(firstWithdrawal);
+
+console.log(accounts);
+
+const account = accounts.find((acc) => acc.owner === "Hiyori Kozuki");
+console.log(account);
+
 //////////////////////////////////////////
 /*
 let arr = ["a", "b", "c", "d", "e"];
@@ -456,6 +468,7 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
+/*
 const calcAverageHumanAge = function (arrData) {
   const avg = arrData
     .map((age) => (age <= 2 ? age * 2 : 16 + age * 4))
@@ -467,3 +480,4 @@ const calcAverageHumanAge = function (arrData) {
 calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 
 calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+*/
