@@ -269,6 +269,19 @@ console.log(accounts);
 const account = accounts.find((acc) => acc.owner === "Hiyori Kozuki");
 console.log(account);
 
+let acc;
+const userName = String(prompt("Enter the UserName"));
+
+for (const name of accounts) {
+  if (name.owner === userName) {
+    acc = name;
+    console.log(acc);
+    break;
+  }
+}
+
+if (!acc) console.log(`No such account found`);
+
 //////////////////////////////////////////
 /*
 let arr = ["a", "b", "c", "d", "e"];
