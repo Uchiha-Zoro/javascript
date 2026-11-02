@@ -603,6 +603,20 @@ const random = Array.from(
 );
 console.log(random);
 
+// const movementsUI = Array.from(document.querySelectorAll(".movements__value"));
+
+// console.log(movementsUI);
+
+labelBalance.addEventListener("click", function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll(".movements__value"),
+    (el) => Number(el.textContent.replace("€", "")),
+  );
+
+  // console.log(movementsUI.map((el) => el.textContent.replace("€", "")));
+  console.log(movementsUI);
+});
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
