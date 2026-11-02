@@ -590,6 +590,19 @@ console.log(x);
 arr.fill(23, 2, 6);
 console.log(arr);
 
+// Array.from
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
+console.log(z);
+
+const random = Array.from(
+  { length: 100 },
+  () => Math.floor(Math.random() * 6) + 1,
+);
+console.log(random);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
