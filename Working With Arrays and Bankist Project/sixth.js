@@ -574,7 +574,7 @@ console.log(overAllBalance2);
 */
 
 // More ways of creating and filling arrays
-
+/*
 console.log([1, 2, 3, 4, 5]);
 console.log(new Array(6, 7, 8, 9, 0));
 
@@ -613,9 +613,43 @@ labelBalance.addEventListener("click", function () {
     (el) => Number(el.textContent.replace("€", "")),
   );
 
+
   // console.log(movementsUI.map((el) => el.textContent.replace("€", "")));
   console.log(movementsUI);
 });
+*/
+
+// NON-Destructive Alternatives
+
+// Reverse
+// console.log(movements);
+// const reversedMov = movements.reverse();
+// console.log(reversedMov);
+// console.log(movements);
+
+// SLice + Reverse
+// console.log(movements);
+// const reversedMov = movements.slice().reverse();
+// console.log(reversedMov);
+// console.log(movements);
+
+// TO Rversed
+console.log(movements);
+const reversedMov = movements.toReversed();
+console.log(reversedMov);
+console.log(movements);
+
+// TO Sorted
+console.log(movements);
+const sortedMov = movements.toSorted();
+console.log(sortedMov);
+console.log(movements);
+
+// TO Spliced
+console.log(movements);
+const splicedMov = movements.toSpliced(2, 3);
+console.log(splicedMov);
+console.log(movements);
 
 ///////////////////////////////////////
 // Coding Challenge #1
