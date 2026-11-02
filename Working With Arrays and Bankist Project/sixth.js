@@ -413,11 +413,12 @@ console.log(account4.movements.every((mov) => mov > 0));
 */
 
 // Separate Callback
-
+/*
 const deposit = (mov) => mov > 0;
 console.log(movements.some(deposit));
 console.log(movements.every(deposit));
 console.log(movements.filter(deposit));
+*/
 
 //////////////////////////////////////////
 /*
@@ -469,6 +470,23 @@ console.log(arr.at(-2));
 console.log("Zoro".at(0));
 console.log("Zoro".at(-1));
 */
+
+// Flat and Flatmap method
+
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
+
+const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arrDeep.flat());
+console.log(arrDeep.flat(1));
+console.log(arrDeep.flat(2));
+
+const accountMovements = accounts.map((acc) => acc.movements);
+console.log(accountMovements);
+const allMovements = accountMovements.flat();
+console.log(allMovements);
+const overAllBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+console.log(overAllBalance);
 
 ///////////////////////////////////////
 // Coding Challenge #1
