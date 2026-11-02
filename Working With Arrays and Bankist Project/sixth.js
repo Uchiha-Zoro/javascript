@@ -685,42 +685,92 @@ YOUR TASKS:
 BONUS: What's the average weight of the heaviest breed that likes to fetch? HINT: Use the "Math.max" method along with the ... operator.
 
 TEST DATA:
+*/
 
 const breeds = [
   {
-    breed: 'German Shepherd',
+    breed: "German Shepherd",
     averageWeight: 32,
-    activities: ['fetch', 'swimming'],
+    activities: ["fetch", "swimming"],
   },
   {
-    breed: 'Dalmatian',
+    breed: "Dalmatian",
     averageWeight: 24,
-    activities: ['running', 'fetch', 'agility'],
+    activities: ["running", "fetch", "agility"],
   },
   {
-    breed: 'Labrador',
+    breed: "Labrador",
     averageWeight: 28,
-    activities: ['swimming', 'fetch'],
+    activities: ["swimming", "fetch"],
   },
   {
-    breed: 'Beagle',
+    breed: "Beagle",
     averageWeight: 12,
-    activities: ['digging', 'fetch'],
+    activities: ["digging", "fetch"],
   },
   {
-    breed: 'Husky',
+    breed: "Husky",
     averageWeight: 26,
-    activities: ['running', 'agility', 'swimming'],
+    activities: ["running", "agility", "swimming"],
   },
   {
-    breed: 'Bulldog',
+    breed: "Bulldog",
     averageWeight: 36,
-    activities: ['sleeping'],
+    activities: ["sleeping"],
   },
   {
-    breed: 'Poodle',
+    breed: "Poodle",
     averageWeight: 18,
-    activities: ['agility', 'fetch'],
+    activities: ["agility", "fetch"],
   },
 ];
-*/
+
+// 1.
+const huskyWeight = breeds.find(
+  (breed) => breed.breed === "Husky",
+).averageWeight;
+console.log(huskyWeight);
+
+// 2.
+const dogBothActivities = breeds.find(
+  (breed) =>
+    breed.activities.includes("fetch") && breed.activities.includes("running"),
+).breed;
+console.log(dogBothActivities);
+
+// 3.
+const allActivities = breeds.flatMap((breed) => breed.activities);
+console.log(allActivities);
+
+// 4.
+const uniqueActivities = [...new Set(allActivities)];
+console.log(uniqueActivities);
+
+// 5.
+const swimmingAdjacent = [
+  ...new Set(
+    breeds
+      .filter((breed) => breed.activities.includes("swimming"))
+      .flatMap((breed) => breed.activities)
+      .filter((breed) => breed !== "swimming"),
+  ),
+];
+console.log(swimmingAdjacent);
+
+// 6.
+const breedAverageWeight = breeds.every((breed) => breed.averageWeight >= 10);
+console.log(breedAverageWeight);
+
+// 7.
+const active = breeds.some((breed) => breed.activities.length >= 3);
+console.log(active);
+
+// BONUS
+const fetch = breeds
+  .filter((breed) => breed.activities.includes("fetch"))
+  .map((breed) => breed.averageWeight);
+
+const heaviestFetch = Math.max(...fetch);
+
+console.log(fetch);
+console.log(heaviestFetch);
