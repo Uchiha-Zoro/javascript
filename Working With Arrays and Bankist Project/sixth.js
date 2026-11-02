@@ -420,6 +420,32 @@ console.log(movements.every(deposit));
 console.log(movements.filter(deposit));
 */
 
+// Sorting Array
+// Strings
+const owners = ["Jiraiya", "Zoro", "Ash Ketchum", "Mahoraga"];
+console.log(owners.sort());
+console.log(owners);
+
+// Numbers
+console.log(movements);
+
+// return < 0 (keep order)
+// return > 0 (switch order)
+
+// Ascending
+movements.sort((a, b) => {
+  if (a > b) return 1;
+  if (b > a) return -1;
+});
+console.log(movements);
+
+// Descending
+movements.sort((a, b) => {
+  if (a > b) return -1;
+  if (b > a) return 1;
+});
+console.log(movements);
+
 //////////////////////////////////////////
 /*
 let arr = ["a", "b", "c", "d", "e"];
@@ -687,6 +713,7 @@ BONUS: What's the average weight of the heaviest breed that likes to fetch? HINT
 TEST DATA:
 */
 
+/*
 const breeds = [
   {
     breed: "German Shepherd",
@@ -774,3 +801,4 @@ const heaviestFetch = Math.max(...fetch);
 
 console.log(fetch);
 console.log(heaviestFetch);
+*/
