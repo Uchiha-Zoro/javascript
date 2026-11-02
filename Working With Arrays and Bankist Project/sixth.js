@@ -244,7 +244,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //////////////////////////////////////////
 
 // Array Grouping
-
+/*
 console.log(movements);
 
 const groupedMovements = Object.groupBy(movements, (movement) =>
@@ -266,6 +266,7 @@ console.log(groupedByActivity);
 // const groupedAccounts = Object.groupBy(accounts, (account) => account.type);
 const groupedAccounts = Object.groupBy(accounts, ({ type }) => type);
 console.log(groupedAccounts);
+*/
 
 // FOREACH loop on arrays
 /*
@@ -571,6 +572,23 @@ const overAllBalance2 = accounts
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overAllBalance2);
 */
+
+// More ways of creating and filling arrays
+
+console.log([1, 2, 3, 4, 5]);
+console.log(new Array(6, 7, 8, 9, 0));
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+
+const x = new Array(7);
+console.log(x);
+// console.log(x.map(() => 5));
+x.fill(1, 3, 5);
+x.fill(1);
+console.log(x);
+
+arr.fill(23, 2, 6);
+console.log(arr);
 
 ///////////////////////////////////////
 // Coding Challenge #1
