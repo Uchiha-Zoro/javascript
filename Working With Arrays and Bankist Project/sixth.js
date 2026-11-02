@@ -651,6 +651,12 @@ const splicedMov = movements.toSpliced(2, 3);
 console.log(splicedMov);
 console.log(movements);
 
+// movements[1] = 2000;
+const newMovements = movements.with(1, 2000);
+
+console.log(movements);
+console.log(newMovements);
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
