@@ -119,6 +119,24 @@ const createUserName = function (accs) {
 
 createUserName(accounts);
 
+// Event Handlers
+
+let currentAccount;
+
+btnLogin.addEventListener("click", function (e) {
+  // Prevent form from submitting
+  e.preventDefault();
+
+  currentAccount = accounts.find(
+    (acc) => acc.userName === inputLoginUsername.value,
+  );
+  console.log(currentAccount);
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    console.log("LOGIN");
+  }
+});
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // LECTURES
 
@@ -258,7 +276,7 @@ console.log(totalDepositsUSD);
 */
 
 // Find Method
-
+/*
 const firstWithdrawal = movements.find((mov) => mov < 0);
 
 console.log(movements);
@@ -281,6 +299,7 @@ for (const name of accounts) {
 }
 
 if (!acc) console.log(`No such account found`);
+*/
 
 //////////////////////////////////////////
 /*
