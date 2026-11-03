@@ -277,16 +277,46 @@ let a = 10;
 console.log(++a);
 
 // 3.
-const sums = accounts
+const { deposits, withdrawals } = accounts
   .flatMap((acc) => acc.movements)
   .reduce(
     (sums, cur) => {
-      cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+      // cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+      sums[cur > 0 ? "deposits" : "withdrawals"] += cur;
       return sums;
     },
     { deposits: 0, withdrawals: 0 },
   );
-console.log(sums);
+console.log(deposits, withdrawals);
+
+// Small Challenge
+
+const eurToUsd = 1.1;
+console.log(movements);
+
+/*
+const totalDepositsUSD = movements
+  .filter((mov) => mov > 0)
+  // .map((mov) => mov * eurToUsd)
+  .map((mov, i, arr) => {
+    // console.log(arr);
+    return mov * eurToUsd;
+  })
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(totalDepositsUSD);
+*/
+
+const totalDepositsUSDReduce = movements.reduce(
+  (acc, mov) => {
+    if (mov > 0) {
+      acc.deposit += mov * eurToUsd;
+      acc.depositArr.push(mov);
+    }
+    return acc;
+  },
+  { deposit: 0, depositArr: [] },
+);
+console.log(totalDepositsUSDReduce);
 
 //////////////////////////////////////////
 // Working with lectures data above //////
