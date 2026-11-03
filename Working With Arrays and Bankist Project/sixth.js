@@ -277,6 +277,16 @@ let a = 10;
 console.log(++a);
 
 // 3.
+const sums = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce(
+    (sums, cur) => {
+      cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+      return sums;
+    },
+    { deposits: 0, withdrawals: 0 },
+  );
+console.log(sums);
 
 //////////////////////////////////////////
 // Working with lectures data above //////
