@@ -254,3 +254,14 @@ btnSort.addEventListener("click", function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
+// Converting and Checking Numbers
+console.log(23 === 23.0);
+
+// Base 10 - 0 to 9
+// Base 2 - 0 to 2
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 === 0.3);
+
+console.log(Number("23"));
+console.log(+"23");
