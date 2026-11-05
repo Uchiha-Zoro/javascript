@@ -10,7 +10,7 @@
 // DIFFERENT DATA! Contains movement dates, currency and locale
 
 const account1 = {
-  owner: "Jonas Schmedtmann",
+  owner: "Monkey D Luffy",
   movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
   interestRate: 1.2, // %
   pin: 1111,
@@ -30,7 +30,7 @@ const account1 = {
 };
 
 const account2 = {
-  owner: "Jessica Davis",
+  owner: "Boa Hancock",
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
@@ -94,7 +94,7 @@ const displayMovements = function (movements, sort = false) {
         <div class="movements__type movements__type--${type}">${
           i + 1
         } ${type}</div>
-        <div class="movements__value">${mov}€</div>
+        <div class="movements__value">${mov.toFixed(2)}€</div>
       </div>
     `;
 
@@ -111,12 +111,12 @@ const calcDisplaySummary = function (acc) {
   const incomes = acc.movements
     .filter((mov) => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${incomes}€`;
+  labelSumIn.textContent = `${incomes.toFixed(2)}€`;
 
   const out = acc.movements
     .filter((mov) => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumOut.textContent = `${Math.abs(out)}€`;
+  labelSumOut.textContent = `${Math.abs(out).toFixed(2)}€`;
 
   const interest = acc.movements
     .filter((mov) => mov > 0)
@@ -126,7 +126,7 @@ const calcDisplaySummary = function (acc) {
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${interest}€`;
+  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
 };
 
 const createUsernames = function (accs) {
@@ -206,7 +206,7 @@ btnTransfer.addEventListener("click", function (e) {
 btnLoan.addEventListener("click", function (e) {
   e.preventDefault();
 
-  const amount = +inputLoanAmount.value;
+  const amount = Math.floor(inputLoanAmount.value);
 
   if (
     amount > 0 &&
