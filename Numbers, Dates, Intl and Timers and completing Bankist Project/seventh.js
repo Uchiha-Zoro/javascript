@@ -366,7 +366,7 @@ labelBalance.addEventListener("click", function () {
 */
 
 // Numeric Separators
-
+/*
 // 287,460,000,000
 const diameter = 287460000000;
 const diameterWithSeparator = 287_460_000_000;
@@ -396,3 +396,28 @@ console.log(PI);
 console.log(Number("230000"));
 console.log(Number("230_000"));
 console.log(Number.parseInt("230_000"));
+*/
+
+// Working with BigInt
+
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+
+console.log(2 ** 53 + 0);
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+
+console.log(3426745676437658347653456);
+console.log(3426745676437658347653456n);
+
+console.log(BigInt(37467236547654));
+
+// Operations
+console.log(10000n + 10000n);
+console.log(63466635674567354556345767553n * 10000n);
+
+const huge = 83468735656346374673648962n;
+const num = 23;
+// console.log(huge + num);
+console.log(huge + BigInt(num));
