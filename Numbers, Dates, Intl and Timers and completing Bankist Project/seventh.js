@@ -295,7 +295,7 @@ console.log(Number.isInteger(23 / 0));
 */
 
 // Math and Rounding
-
+/*
 // Math
 console.log(Math.sqrt(25));
 console.log(25 ** (1 / 2));
@@ -339,3 +339,20 @@ console.log((2.7).toFixed(0));
 console.log((2.7).toFixed(3));
 console.log((2.345).toFixed(2));
 console.log(+(2.345).toFixed(2));
+*/
+
+// The Remainder Operator
+
+console.log(5 % 2);
+
+console.log(8 % 3);
+
+console.log(6 % 2);
+
+console.log(7 % 2);
+
+const IsEven = (n) => n % 2 === 0;
+
+console.log(IsEven(8));
+console.log(IsEven(23));
+console.log(IsEven(514));
