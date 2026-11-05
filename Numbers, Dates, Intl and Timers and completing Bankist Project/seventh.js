@@ -521,3 +521,15 @@ console.log(Date.now());
 future.setFullYear(2040);
 console.log(future);
 */
+
+// Operations with Dates
+
+const future = new Date(2030, 10, 19, 15, 23);
+console.log(+future);
+
+const calcDaysPassed = (date1, date2) =>
+  console.log(
+    `${Math.abs(date2 - date1) / (1000 * 60 * 60 * 24)} days have passed`,
+  );
+
+calcDaysPassed(new Date(2030, 3, 14), new Date(2030, 3, 24));
