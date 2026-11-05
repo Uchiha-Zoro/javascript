@@ -416,8 +416,22 @@ console.log(BigInt(37467236547654));
 // Operations
 console.log(10000n + 10000n);
 console.log(63466635674567354556345767553n * 10000n);
+// console.log(Math.sqrt(16n));
 
 const huge = 83468735656346374673648962n;
 const num = 23;
 // console.log(huge + num);
 console.log(huge + BigInt(num));
+
+// Exceptions
+console.log(20n > 15);
+console.log(20n === 20);
+console.log(typeof 20n);
+console.log(20n == 20);
+console.log(20n == "20");
+
+console.log(huge + " is REALLY big!!!");
+
+// Divisions
+console.log(10n / 3n);
+console.log(10 / 3);
