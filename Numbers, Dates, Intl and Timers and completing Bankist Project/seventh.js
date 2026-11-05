@@ -399,7 +399,7 @@ console.log(Number.parseInt("230_000"));
 */
 
 // Working with BigInt
-
+/*
 console.log(2 ** 53 - 1);
 console.log(Number.MAX_SAFE_INTEGER);
 
@@ -435,3 +435,22 @@ console.log(huge + " is REALLY big!!!");
 // Divisions
 console.log(10n / 3n);
 console.log(10 / 3);
+*/
+
+// Creating Dates
+
+const now = new Date();
+console.log(now);
+
+console.log(new Date("Nov 14 2026 18:06:00"));
+
+console.log(new Date("December 24, 2030"));
+
+console.log(new Date(account1.movementsDates[0]));
+
+console.log(new Date(2030, 10, 19, 15, 23, 5));
+console.log(new Date(2030, 10, 31));
+console.log(new Date(2030, 10, 33));
+
+console.log(new Date(0));
+console.log(new Date(3 * 24 * 60 * 60 * 1000));
