@@ -332,3 +332,10 @@ console.log(Math.trunc(23.9));
 
 console.log(Math.trunc(-23.3));
 console.log(Math.floor(-23.3));
+
+// Rounding Decimals
+
+console.log((2.7).toFixed(0));
+console.log((2.7).toFixed(3));
+console.log((2.345).toFixed(2));
+console.log(+(2.345).toFixed(2));
