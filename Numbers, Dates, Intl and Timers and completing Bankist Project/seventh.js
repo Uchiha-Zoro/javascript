@@ -549,3 +549,19 @@ const calcDaysPassed = (date1, date2) =>
 
 calcDaysPassed(new Date(2030, 3, 14), new Date(2030, 3, 24));
 */
+
+// Experimenting with Internationalization API
+
+const now = new Date();
+const options = {
+  hour: "numeric",
+  minute: "numeric",
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+  weekday: "long",
+};
+const locale = navigator.language;
+console.log(locale);
+
+labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(now);
