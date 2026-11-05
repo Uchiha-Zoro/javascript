@@ -356,3 +356,10 @@ const IsEven = (n) => n % 2 === 0;
 console.log(IsEven(8));
 console.log(IsEven(23));
 console.log(IsEven(514));
+
+labelBalance.addEventListener("click", function () {
+  [...document.querySelectorAll(".movements__row")].forEach((row, i) => {
+    if (i % 2 === 0) row.style.backgroundColor = "lime";
+    if (i % 3 === 0) row.style.backgroundColor = "aqua";
+  });
+});
