@@ -570,7 +570,7 @@ const calcDaysPassed = (date1, date2) =>
 calcDaysPassed(new Date(2030, 3, 14), new Date(2030, 3, 24));
 */
 
-// Experimenting with Internationalization API
+// Experimenting with Internationalization API on Dates
 /*
 const now = new Date();
 const options = {
@@ -586,3 +586,27 @@ console.log(locale);
 
 labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(now);
 */
+
+// Experimenting with Internationalization API on Numbers
+
+const num = 3884764.23;
+
+const option = {
+  // style: "unit",
+  // style: "percent",
+  style: "currency",
+  // unit: "mile-per-hour",
+  unit: "celsius",
+  // currency: "INR",
+  currency: "EUR",
+  // useGrouping: false,
+};
+
+console.log("US:     ", new Intl.NumberFormat("en-US", option).format(num));
+console.log("Germany:", new Intl.NumberFormat("de-DE", option).format(num));
+console.log("Syria:  ", new Intl.NumberFormat("ar-SY", option).format(num));
+console.log(
+  navigator.language,
+  ": ",
+  new Intl.NumberFormat(navigator.language, option).format(num),
+);
