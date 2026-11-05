@@ -625,6 +625,7 @@ console.log(
 
 // Timers, SetTimeout and SetIntervals
 
+// SetTimeout
 /*
 const ingredients = ["olives", "spinach"];
 // setTimeout(() => console.log("Here is your pizza 🍕"), 3000);
@@ -637,3 +638,16 @@ console.log("Waiting...");
 
 if (ingredients.includes("spinach")) clearTimeout(pizzaTimer);
 */
+
+// SetIntervals
+
+setInterval(function () {
+  const now = new Date();
+  console.log(
+    new Intl.DateTimeFormat("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      second: "2-digit",
+    }).format(now),
+  );
+}, 1000);
