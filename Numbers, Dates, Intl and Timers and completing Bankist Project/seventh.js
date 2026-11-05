@@ -620,3 +620,14 @@ console.log(
   new Intl.NumberFormat(navigator.language, option).format(num),
 );
 */
+
+// Timers, SetTimeout and SetIntervals
+
+// setTimeout(() => console.log("Here is your pizza 🍕"), 3000);
+setTimeout(
+  (ing1, ing2) => console.log(`Here is your pizza 🍕 with ${ing1} and ${ing2}`),
+  3000,
+  "olives",
+  "spinach",
+);
+console.log("Waiting...");
