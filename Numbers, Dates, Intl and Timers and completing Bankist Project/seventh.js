@@ -101,6 +101,13 @@ const formatMovement = function (date, locale) {
   return new Intl.DateTimeFormat(locale).format(date);
 };
 
+const formatCur = function (value, locale, currency) {
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: currency,
+  }).format(value);
+};
+
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = "";
 
@@ -124,13 +131,15 @@ const displayMovements = function (acc, sort = false) {
     const date = new Date(movementDate);
     const displayDate = formatMovement(date, acc.locale);
 
+    const formattedMov = formatCur(movement, acc.locale, acc.currency);
+
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
           i + 1
         } ${type}</div>
         <div class="movements__date">${displayDate}</div>
-        <div class="movements__value">${movement.toFixed(2)}€</div>
+        <div class="movements__value">${formattedMov}</div>
       </div>
     `;
 
@@ -588,7 +597,7 @@ labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(now);
 */
 
 // Experimenting with Internationalization API on Numbers
-
+/*
 const num = 3884764.23;
 
 const option = {
@@ -610,3 +619,4 @@ console.log(
   ": ",
   new Intl.NumberFormat(navigator.language, option).format(num),
 );
+*/
