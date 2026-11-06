@@ -39,6 +39,7 @@ document.addEventListener("keydown", function (e) {
 
 // Selecting, Creating and Deleting Elements
 
+// Selecting Elements
 console.log(document.documentElement);
 console.log(document.head);
 console.log(document.body);
@@ -50,3 +51,7 @@ console.log(allSections);
 document.getElementById("section--1");
 const allButtons = document.getElementsByTagName("button");
 console.log(allButtons);
+
+console.log(document.getElementsByClassName("btn"));
+
+// Creating and Inserting Elements
