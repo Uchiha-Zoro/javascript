@@ -38,7 +38,7 @@ document.addEventListener("keydown", function (e) {
 ///////////////////////////////////////
 
 // Selecting, Creating and Deleting Elements
-
+/*
 // Selecting Elements
 console.log(document.documentElement);
 console.log(document.head);
@@ -76,9 +76,10 @@ document
     message.remove();
     // message.parentElement.removeChild(message);
   });
+*/
 
 // Styles, Attributes and Classes
-
+/*
 // Styles
 message.style.backgroundColor = "#37383d";
 message.style.width = "120%";
@@ -126,3 +127,36 @@ logo.classList.contains("c");
 
 // Don't use this
 logo.closeModal = "Zoro";
+*/
+
+const btnScrollTo = document.querySelector(".btn--scroll-to");
+const section1 = document.querySelector("#section--1");
+
+btnScrollTo.addEventListener("click", function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log("Current scroll (X/Y)", window.scrollX, window.scrollY);
+
+  console.log(
+    "height/weight viewport",
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth,
+  );
+
+  // Scrolling
+  // window.scrollTo(
+  //   s1coords.left + window.scrollX,
+  //   s1coords.top + window.scrollY,
+  // );
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.scrollX,
+  //   top: s1coords.top + window.scrollY,
+  //   behavior: "smooth",
+  // });
+
+  section1.scrollIntoView({ behavior: "smooth" });
+});
