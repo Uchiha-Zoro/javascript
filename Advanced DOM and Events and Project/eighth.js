@@ -70,3 +70,9 @@ header.append(message);
 // header.after(message);
 
 // Delete Elements
+document
+  .querySelector(".btn--close-cookie")
+  .addEventListener("click", function () {
+    message.remove();
+    // message.parentElement.removeChild(message);
+  });
