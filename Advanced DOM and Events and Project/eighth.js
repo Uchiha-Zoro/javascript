@@ -143,6 +143,7 @@ nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
 
 // Sticky Navigation
+/*
 const initialCoords = section1.getBoundingClientRect();
 
 window.addEventListener("scroll", function () {
@@ -151,6 +152,7 @@ window.addEventListener("scroll", function () {
   if (window.scrollY > initialCoords.top) nav.classList.add("sticky");
   else nav.classList.remove("sticky");
 });
+*/
 
 ///////////////////////////////////////
 ///////////////////////////////////////
@@ -366,3 +368,5 @@ console.log(h1.parentElement.children);
   if (el !== h1) el.style.transform = "scale(0.5";
 });
 */
+
+// The Intersection Observer API
