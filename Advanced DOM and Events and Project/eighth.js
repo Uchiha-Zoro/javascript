@@ -216,10 +216,20 @@ const loading = function (entries, observer) {
 const imgObserver = new IntersectionObserver(loading, {
   root: null,
   threshold: 0,
-  rootMargin: "200px", // Check lazy loading process use 50px
+  rootMargin: "200px", // To Check lazy loading process use 50px
 });
 
 imgTargets.forEach((img) => imgObserver.observe(img));
+
+// Slider
+
+const slides = document.querySelectorAll(".slide");
+const btnLeft = document.querySelector(".slider__btn--left");
+const btnRight = document.querySelector(".slider__btn--right");
+
+const slider = document.querySelector(".slider");
+
+slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 
 ///////////////////////////////////////
 ///////////////////////////////////////
