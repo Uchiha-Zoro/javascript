@@ -46,3 +46,12 @@ console.log(Person.prototype.isPrototypeOf(zoro));
 console.log(Person.prototype.isPrototypeOf(luffy));
 console.log(Person.prototype.isPrototypeOf(sanji));
 console.log(Person.prototype.isPrototypeOf(Person));
+
+Person.prototype.species = "Homo Sapiens";
+console.log(zoro, luffy, sanji);
+console.log(zoro.species);
+console.log(luffy.species);
+console.log(sanji.species);
+
+console.log(zoro.hasOwnProperty("firstName"));
+console.log(zoro.hasOwnProperty("species"));
