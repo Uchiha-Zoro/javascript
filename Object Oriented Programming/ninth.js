@@ -252,6 +252,83 @@ Student.prototype.constructor = Student;
 console.dir(Student.prototype.constructor);
 */
 
+// Inheritance between "Classes" : Classes
+
+class PersonCl {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+
+  // Instance Method
+  // Methods will be added to .prototype property
+  calcAge() {
+    console.log(2030 - this.birthYear);
+  }
+
+  greet() {
+    console.log(`Hey ${this.fullName}`);
+  }
+
+  get age() {
+    return 2030 - this.birthYear;
+  }
+
+  // Set a property that already exists
+  set fullName(name) {
+    if (name.includes(" ")) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  // Static Method
+  static hey() {
+    console.log("Hey there 👋");
+  }
+}
+
+/*
+class StudentCl extends PersonCl {
+  // constructor(fullName, birthYear, course) {
+  //   // Always needs to happen first
+  //   super(fullName, birthYear);
+  //   // this.course = course;
+  // }
+}
+
+const damian = new StudentCl("Damian Desmod", 2007);
+console.log(damian);
+*/
+
+class StudentCl extends PersonCl {
+  constructor(fullName, birthYear, course) {
+    // Always needs to happen first
+    super(fullName, birthYear);
+    this.course = course;
+  }
+
+  introduce() {
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  }
+
+  calcAge() {
+    console.log(
+      `I'm ${2030 - this.birthYear} years old, but as a student I feel more like ${2030 - this.birthYear + 10}`,
+    );
+  }
+}
+
+const damian = new StudentCl("Damian Desmod", 2007, "Information Technology");
+damian.introduce();
+damian.calcAge();
+
+///////////////////////////////////////
+// Challenge
+///////////////////////////////////////
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
@@ -470,7 +547,7 @@ tesla.accelerate();
 */
 
 // My Teacher's Solution
-
+/*
 const Car = function (make, speed) {
   this.make = make;
   this.speed = speed;
@@ -511,3 +588,4 @@ tesla.chargeBattery(90);
 console.log(tesla);
 tesla.brake();
 tesla.accelerate();
+*/
