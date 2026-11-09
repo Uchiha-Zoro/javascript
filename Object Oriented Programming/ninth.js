@@ -253,7 +253,7 @@ console.dir(Student.prototype.constructor);
 */
 
 // Inheritance between "Classes" : Classes
-
+/*
 class PersonCl {
   constructor(fullName, birthYear) {
     this.fullName = fullName;
@@ -289,6 +289,7 @@ class PersonCl {
     console.log("Hey there 👋");
   }
 }
+*/
 
 /*
 class StudentCl extends PersonCl {
@@ -303,6 +304,7 @@ const damian = new StudentCl("Damian Desmod", 2007);
 console.log(damian);
 */
 
+/*
 class StudentCl extends PersonCl {
   constructor(fullName, birthYear, course) {
     // Always needs to happen first
@@ -324,6 +326,39 @@ class StudentCl extends PersonCl {
 const damian = new StudentCl("Damian Desmod", 2007, "Information Technology");
 damian.introduce();
 damian.calcAge();
+*/
+
+// Inheritance between "Classes" : Object.create
+
+const PersonProto = {
+  calcAge() {
+    console.log(2030 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+const yor = Object.create(PersonProto);
+
+const StudentProto = Object.create(PersonProto);
+
+StudentProto.init = function (firstName, birthYear, course) {
+  PersonProto.init.call(this, firstName, birthYear);
+  this.course = course;
+};
+
+StudentProto.introduce = function () {
+  console.log(`My name is ${this.firstName} and I study ${this.course}`);
+};
+
+const becky = Object.create(StudentProto);
+becky.init("Becky", 2008, "Information Technology");
+console.log(becky);
+becky.introduce();
+becky.calcAge();
 
 ///////////////////////////////////////
 // Challenge
