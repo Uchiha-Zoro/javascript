@@ -362,7 +362,7 @@ becky.calcAge();
 */
 
 // More about Classes
-
+/*
 class Account {
   constructor(owner, currency, pin) {
     this.owner = owner;
@@ -371,7 +371,7 @@ class Account {
     this.movements = [];
     this.locale = navigator.language;
 
-    console.log(`Thanks for opening an account ${owner}`);
+    console.log(`Thanks for opening an account, ${owner}`);
   }
 
   deposit(val) {
@@ -394,7 +394,7 @@ class Account {
   }
 }
 
-const acc1 = new Account("Jonas", "EUR", 1111);
+const acc1 = new Account("Zoro", "EUR", 1111);
 
 // acc1.movements.push(250);
 // acc1.movements.push(-140);
@@ -404,6 +404,77 @@ acc1.withdraw(140);
 acc1.requestLoan(1000);
 
 console.log(acc1);
+*/
+
+///////////////////////////////////////////////
+// Encapsulation: Private Class Fields and Methods
+
+// 1. Public fields
+// 2. Private fields
+// 3. Public methods
+// 4. Private methods
+// STATIC version of these four
+
+class Account {
+  locale = navigator.language;
+  bank = "Bankist";
+  #movements = [];
+  #pin;
+
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.#pin = pin;
+
+    // this.movements = [];
+    // this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account, ${owner}`);
+  }
+
+  // Public Interface (API)
+  getMovements() {
+    return this.#movements;
+  }
+
+  deposit(val) {
+    this.#movements.push(val);
+  }
+
+  withdraw(val) {
+    this.deposit(-val);
+  }
+
+  #approveLoan(val) {
+    return true;
+  }
+
+  requestLoan(val) {
+    if (this.approveLoan(val)) {
+      this.deposit(val);
+      console.log(`Loan approved`);
+    }
+  }
+
+  // static test() {
+  //   console.log("TEST");
+  // }
+
+  static #test() {
+    console.log("TEST");
+  }
+}
+
+const acc1 = new Account("Zoro", "EUR", 1111);
+acc1.deposit(300);
+acc1.withdraw(100);
+
+console.log(acc1);
+// console.log(acc1.#movements);
+// acc1.#approveLoan(223);
+
+// Account.test();
+// Account.#test();
 
 ///////////////////////////////////////
 // Challenge
