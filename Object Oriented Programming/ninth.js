@@ -1,6 +1,5 @@
 "use strict";
 
-/*
 // Constructor Functions and the new Operator
 
 const Person = function (firstName, birthYear) {
@@ -27,6 +26,14 @@ const sanji = new Person("Sanji", 1991);
 console.log(luffy, sanji);
 
 console.log(luffy instanceof Person);
+
+Person.hey = function () {
+  console.log("Hey there 👋");
+  console.log(this);
+};
+
+Person.hey();
+// zoro.hey();
 
 // Prototypes
 
@@ -58,7 +65,7 @@ console.log(zoro.hasOwnProperty("firstName"));
 console.log(zoro.hasOwnProperty("species"));
 
 // Prototypal Inheritance on Build in Objects
-
+/*
 console.log(zoro.__proto__);
 // Object.prototype ( top of prototype chain )
 console.log(zoro.__proto__.__proto__);
@@ -156,7 +163,7 @@ mercedes.brake();
 */
 
 // Classes
-
+/*
 // Class expression
 // const PersonCl = class {};
 
@@ -211,9 +218,10 @@ zoro.greet();
 
 // const sanji = new PersonCl("Sanji", 1991);
 const sanji = new PersonCl("Sanji Vinsmoke", 1991);
+*/
 
 // Setters and Getters
-
+/*
 const account = {
   owner: "Zoro",
   movements: [200, 530, 120, 300],
@@ -231,3 +239,4 @@ console.log(account.latest);
 
 account.latest = 50;
 console.log(account.movements);
+*/
