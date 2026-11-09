@@ -1,7 +1,7 @@
 "use strict";
 
 // Constructor Functions and the new Operator
-/*
+
 const Person = function (firstName, birthYear) {
   // Instance Properties
   this.firstName = firstName;
@@ -34,7 +34,6 @@ Person.hey = function () {
 
 Person.hey();
 // zoro.hey();
-*/
 
 // Prototypes
 /*
@@ -207,26 +206,26 @@ class PersonCl {
   }
 }
 
-const zoro = new PersonCl("Zoro Roronoa", 1990);
-console.log(zoro);
-console.log(zoro.age);
+const naruto = new PersonCl("Naruto Uzumaki", 1990);
+console.log(naruto);
+console.log(naruto.age);
 
-zoro.calcAge();
+naruto.calcAge();
 
-console.log(zoro.__proto__ === PersonCl.prototype);
+console.log(naruto.__proto__ === PersonCl.prototype);
 
 // PersonCl.prototype.greet = function () {
 //   console.log(`Hey ${this.firstName}`);
 // };
 
-zoro.greet();
+naruto.greet();
 
 // 1. Classes are NOT hoisted
 // 2. Classes are first-class citizens
 // 3. Classes are executed in strict mode
 
 // const sanji = new PersonCl("Sanji", 1991);
-const sanji = new PersonCl("Sanji Vinsmoke", 1991);
+const sasuke = new PersonCl("Sasuke Uchiha", 1991);
 
 PersonCl.hey();
 
@@ -250,3 +249,17 @@ console.log(account.latest);
 account.latest = 50;
 console.log(account.movements);
 */
+
+// Object.create
+
+const PersonProto = {
+  calcAge() {
+    console.log(2031 - this.birthYear);
+  },
+};
+
+const itachi = Object.create(PersonProto);
+console.log(itachi);
+itachi.name = "Itachi";
+itachi.birthYear = 1980;
+itachi.calcAge();
