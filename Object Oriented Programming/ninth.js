@@ -208,6 +208,50 @@ minato.calcAge();
 console.log(minato);
 */
 
+// Inheritance between "Classes" : constructor functions
+/*
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+
+Person.prototype.calcAge = function () {
+  console.log(2037 - this.birthYear);
+};
+
+const Student = function (firstName, birthYear, course) {
+  Person.call(this, firstName, birthYear);
+  // this.firstName = firstName;
+  // this.birthYear = birthYear;
+  this.course = course;
+};
+
+// We want to inherit the person prototype but DO NOT want to make it identical to person prototype
+// Student.prototype = Person.prototype;
+
+// Linking Prototypes
+Student.prototype = Object.create(Person.prototype);
+
+Student.prototype.introduce = function () {
+  console.log(`My name is ${this.firstName} and I study ${this.course}`);
+};
+
+const anya = new Student("Anya", 2008, "Information Technology");
+
+anya.introduce();
+anya.calcAge();
+
+console.log(anya.__proto__);
+console.log(anya.__proto__.__proto__);
+
+console.log(anya instanceof Student);
+console.log(anya instanceof Person);
+console.log(anya instanceof Object);
+
+Student.prototype.constructor = Student;
+console.dir(Student.prototype.constructor);
+*/
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
@@ -365,50 +409,6 @@ ford.speedUS = 50;
 console.log(ford);
 */
 
-// Inheritance between "Classes" : constructor functions
-/*
-const Person = function (firstName, birthYear) {
-  this.firstName = firstName;
-  this.birthYear = birthYear;
-};
-
-Person.prototype.calcAge = function () {
-  console.log(2037 - this.birthYear);
-};
-
-const Student = function (firstName, birthYear, course) {
-  Person.call(this, firstName, birthYear);
-  // this.firstName = firstName;
-  // this.birthYear = birthYear;
-  this.course = course;
-};
-
-// We want to inherit the person prototype but DO NOT want to make it identical to person prototype
-// Student.prototype = Person.prototype;
-
-// Linking Prototypes
-Student.prototype = Object.create(Person.prototype);
-
-Student.prototype.introduce = function () {
-  console.log(`My name is ${this.firstName} and I study ${this.course}`);
-};
-
-const anya = new Student("Anya", 2008, "Information Technology");
-
-anya.introduce();
-anya.calcAge();
-
-console.log(anya.__proto__);
-console.log(anya.__proto__.__proto__);
-
-console.log(anya instanceof Student);
-console.log(anya instanceof Person);
-console.log(anya instanceof Object);
-
-Student.prototype.constructor = Student;
-console.dir(Student.prototype.constructor);
-*/
-
 ///////////////////////////////////////
 // Coding Challenge #3
 
@@ -422,3 +422,46 @@ DATA CAR 1: 'Tesla' going at 120 km/h, with a charge of 23%
 
 GOOD LUCK 😀
 */
+
+const Car = function (make, speed) {
+  this.make = make;
+  this.speed = speed;
+};
+
+Car.prototype.accelerate = function () {
+  this.speed += 10;
+  console.log(`${this.make} is going at ${this.speed} km/h`);
+};
+
+Car.prototype.brake = function () {
+  this.speed -= 5;
+  console.log(`${this.make} is going at ${this.speed} km/h`);
+};
+
+const EV = function (make, speed, charge) {
+  Car.call(this, make, speed);
+  this.charge = charge;
+};
+
+EV.prototype = Object.create(Car.prototype);
+
+EV.prototype.constructor = EV;
+
+EV.prototype.chargeBattery = function (chargeTo) {
+  this.charge = chargeTo;
+};
+
+EV.prototype.accelerate = function () {
+  this.speed += 20;
+  this.charge -= 1;
+  console.log(
+    `${this.make} going at ${this.speed} km/h, with a charge of ${this.charge}%`,
+  );
+};
+
+const tesla = new EV("Tesla", 120, 23);
+tesla.accelerate();
+tesla.brake();
+tesla.accelerate();
+tesla.chargeBattery(45);
+tesla.accelerate();
