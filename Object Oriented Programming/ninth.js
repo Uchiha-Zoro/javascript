@@ -55,3 +55,19 @@ console.log(sanji.species);
 
 console.log(zoro.hasOwnProperty("firstName"));
 console.log(zoro.hasOwnProperty("species"));
+
+// Prototypal Inheritance on Build in Objects
+
+console.log(zoro.__proto__);
+// Object.prototype ( top of prototype chain )
+console.log(zoro.__proto__.__proto__);
+console.log(zoro.__proto__.__proto__.__proto__);
+
+// console.log(Person.prototype.constructor);
+console.dir(Person.prototype.constructor);
+
+const arr = [3, 6, 4, 5, 6, 9, 3];
+console.log(arr.__proto__);
+console.log(arr.__proto__ === Array.prototype);
+
+console.log(arr.__proto__.__proto__);
