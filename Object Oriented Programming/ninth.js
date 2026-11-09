@@ -361,6 +361,8 @@ becky.introduce();
 becky.calcAge();
 */
 
+// More about Classes
+
 class Account {
   constructor(owner, currency, pin) {
     this.owner = owner;
@@ -379,6 +381,17 @@ class Account {
   withdraw(val) {
     this.deposit(-val);
   }
+
+  approveLoan(val) {
+    return true;
+  }
+
+  requestLoan(val) {
+    if (this.approveLoan(val)) {
+      this.deposit(val);
+      console.log(`Loan approved`);
+    }
+  }
 }
 
 const acc1 = new Account("Jonas", "EUR", 1111);
@@ -388,6 +401,7 @@ const acc1 = new Account("Jonas", "EUR", 1111);
 
 acc1.deposit(250);
 acc1.withdraw(140);
+acc1.requestLoan(1000);
 
 console.log(acc1);
 
