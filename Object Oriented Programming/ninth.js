@@ -329,7 +329,7 @@ damian.calcAge();
 */
 
 // Inheritance between "Classes" : Object.create
-
+/*
 const PersonProto = {
   calcAge() {
     console.log(2030 - this.birthYear);
@@ -359,6 +359,37 @@ becky.init("Becky", 2008, "Information Technology");
 console.log(becky);
 becky.introduce();
 becky.calcAge();
+*/
+
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.pin = pin;
+    this.movements = [];
+    this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account ${owner}`);
+  }
+
+  deposit(val) {
+    this.movements.push(val);
+  }
+
+  withdraw(val) {
+    this.deposit(-val);
+  }
+}
+
+const acc1 = new Account("Jonas", "EUR", 1111);
+
+// acc1.movements.push(250);
+// acc1.movements.push(-140);
+
+acc1.deposit(250);
+acc1.withdraw(140);
+
+console.log(acc1);
 
 ///////////////////////////////////////
 // Challenge
