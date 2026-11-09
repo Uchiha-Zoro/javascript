@@ -330,7 +330,7 @@ ford.brake();
 */
 
 // My Teacher's Solution
-
+/*
 class CarCl {
   constructor(make, speed) {
     this.make = make;
@@ -363,3 +363,29 @@ ford.accelerate();
 ford.brake();
 ford.speedUS = 50;
 console.log(ford);
+*/
+
+// Inheritance between "Classes" : constructor functions
+
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+
+Person.prototype.calcAge = function () {
+  console.log(2037 - this.birthYear);
+};
+
+const Student = function (firstName, birthYear, course) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+  this.course = course;
+};
+
+Student.prototype.introduce = function () {
+  console.log(`My name is ${this.firstName} and I study ${this.course}`);
+};
+
+const anya = new Student("Anya", 2008, "Information Technology");
+
+anya.introduce();
