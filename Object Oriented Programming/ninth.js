@@ -128,6 +128,7 @@ mercedes.brake();
 */
 
 // My Teacher's Solution
+/*
 const Car = function (make, speed) {
   this.make = make;
   this.speed = speed;
@@ -152,3 +153,19 @@ bmw.brake();
 mercedes.accelerate();
 mercedes.brake();
 mercedes.brake();
+*/
+
+// Classes
+
+// Class expression
+// const PersonCl = class {};
+
+// Class declaration
+class PersonCl {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+}
+
+const zoro = new PersonCl("Zoro", 1990);
