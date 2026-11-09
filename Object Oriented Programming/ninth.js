@@ -383,6 +383,12 @@ const Student = function (firstName, birthYear, course) {
   this.course = course;
 };
 
+// We want to inherit the person prototype but DO NOT want to make it identical to person prototype
+// Student.prototype = Person.prototype;
+
+// Linking Prototypes
+Student.prototype = Object.create(Person.prototype);
+
 Student.prototype.introduce = function () {
   console.log(`My name is ${this.firstName} and I study ${this.course}`);
 };
@@ -390,3 +396,14 @@ Student.prototype.introduce = function () {
 const anya = new Student("Anya", 2008, "Information Technology");
 
 anya.introduce();
+anya.calcAge();
+
+console.log(anya.__proto__);
+console.log(anya.__proto__.__proto__);
+
+console.log(anya instanceof Student);
+console.log(anya instanceof Person);
+console.log(anya instanceof Object);
+
+Student.prototype.constructor = Student;
+console.dir(Student.prototype.constructor);
