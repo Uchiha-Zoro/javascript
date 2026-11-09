@@ -162,8 +162,8 @@ mercedes.brake();
 
 // Class declaration
 class PersonCl {
-  constructor(firstName, birthYear) {
-    this.firstName = firstName;
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
     this.birthYear = birthYear;
   }
 
@@ -171,24 +171,46 @@ class PersonCl {
   calcAge() {
     console.log(2030 - this.birthYear);
   }
+
+  greet() {
+    console.log(`Hey ${this.fullName}`);
+  }
+
+  get age() {
+    return 2030 - this.birthYear;
+  }
+
+  // Set a property that already exists
+  set fullName(name) {
+    if (name.includes(" ")) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
 }
 
-const zoro = new PersonCl("Zoro", 1990);
+const zoro = new PersonCl("Zoro Roronoa", 1990);
 console.log(zoro);
+console.log(zoro.age);
 
 zoro.calcAge();
 
 console.log(zoro.__proto__ === PersonCl.prototype);
 
-PersonCl.prototype.greet = function () {
-  console.log(`Hey ${this.firstName}`);
-};
+// PersonCl.prototype.greet = function () {
+//   console.log(`Hey ${this.firstName}`);
+// };
 
 zoro.greet();
 
 // 1. Classes are NOT hoisted
 // 2. Classes are first-class citizens
 // 3. Classes are executed in strict mode
+
+// const sanji = new PersonCl("Sanji", 1991);
+const sanji = new PersonCl("Sanji Vinsmoke", 1991);
 
 // Setters and Getters
 
