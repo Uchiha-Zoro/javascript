@@ -1,7 +1,7 @@
 "use strict";
 
 // Constructor Functions and the new Operator
-
+/*
 const Person = function (firstName, birthYear) {
   // Instance Properties
   this.firstName = firstName;
@@ -34,9 +34,10 @@ Person.hey = function () {
 
 Person.hey();
 // zoro.hey();
+*/
 
 // Prototypes
-
+/*
 console.log(Person.prototype);
 
 Person.prototype.calcAge = function () {
@@ -63,6 +64,7 @@ console.log(sanji.species);
 
 console.log(zoro.hasOwnProperty("firstName"));
 console.log(zoro.hasOwnProperty("species"));
+*/
 
 // Prototypal Inheritance on Build in Objects
 /*
@@ -163,7 +165,7 @@ mercedes.brake();
 */
 
 // Classes
-/*
+
 // Class expression
 // const PersonCl = class {};
 
@@ -174,6 +176,7 @@ class PersonCl {
     this.birthYear = birthYear;
   }
 
+  // Instance Method
   // Methods will be added to .prototype property
   calcAge() {
     console.log(2030 - this.birthYear);
@@ -195,6 +198,12 @@ class PersonCl {
 
   get fullName() {
     return this._fullName;
+  }
+
+  // Static Method
+  static hey() {
+    console.log("Hey there 👋");
+    console.log(this);
   }
 }
 
@@ -218,7 +227,8 @@ zoro.greet();
 
 // const sanji = new PersonCl("Sanji", 1991);
 const sanji = new PersonCl("Sanji Vinsmoke", 1991);
-*/
+
+PersonCl.hey();
 
 // Setters and Getters
 /*
