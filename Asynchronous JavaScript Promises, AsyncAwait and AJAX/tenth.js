@@ -126,5 +126,18 @@ setTimeout(() => {
 }, 1000);
 */
 
-const request = fetch(`https://countries.dev/name/portugal`);
-console.log(request);
+// const request = fetch(`https://countries.dev/name/portugal`);
+// console.log(request);
+
+const getCountryData = function (country) {
+  fetch(`https://countries.dev/name/${country}`)
+    .then(function (response) {
+      console.log(response);
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    });
+};
+
+getCountryData('portugal');
