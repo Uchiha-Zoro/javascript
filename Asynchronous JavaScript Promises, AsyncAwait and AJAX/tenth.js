@@ -51,6 +51,8 @@ getCountryData('united states of america');
 getCountryData('germany');
 */
 
+// Welcome to CallBack Hell
+
 const renderCountry = function (data, className = '') {
   // console.log(data.flags.png);
   // console.log(data.flags.svg);
@@ -72,6 +74,7 @@ const renderCountry = function (data, className = '') {
   countriesContainer.style.opacity = 1;
 };
 
+/*
 const getCountryAndNeighbour = function (country) {
   // AJAX call 1
   const request = new XMLHttpRequest();
@@ -121,3 +124,7 @@ setTimeout(() => {
     }, 1000);
   }, 1000);
 }, 1000);
+*/
+
+const request = fetch(`https://countries.dev/name/portugal`);
+console.log(request);
