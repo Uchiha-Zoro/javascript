@@ -126,18 +126,29 @@ setTimeout(() => {
 }, 1000);
 */
 
+// First fetch call
+
 // const request = fetch(`https://countries.dev/name/portugal`);
 // console.log(request);
 
+// Consuming Promises
+
+// const getCountryData = function (country) {
+//   fetch(`https://countries.dev/name/${country}`)
+//     .then(function (response) {
+//       console.log(response);
+//       return response.json();
+//     })
+//     .then(function (data) {
+//       console.log(data);
+//       renderCountry(data[0]);
+//     });
+// };
+
 const getCountryData = function (country) {
   fetch(`https://countries.dev/name/${country}`)
-    .then(function (response) {
-      console.log(response);
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-    });
+    .then(response => response.json())
+    .then(data => renderCountry(data[0]));
 };
 
 getCountryData('portugal');
