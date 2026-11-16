@@ -146,9 +146,20 @@ setTimeout(() => {
 // };
 
 const getCountryData = function (country) {
+  // Country 1
   fetch(`https://countries.dev/name/${country}`)
     .then(response => response.json())
-    .then(data => renderCountry(data[0]));
+    .then(data => {
+      renderCountry(data[0]);
+      const neighbour = data[0].borders?.[0];
+
+      if (!neighbour) return;
+
+      // Country 2
+      // return fetch(`https://countries.dev/alpha/${neighbour}`);
+      return 23;
+    })
+    .then(data => alert(data));
 };
 
 getCountryData('portugal');
