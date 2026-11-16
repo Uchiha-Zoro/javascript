@@ -156,10 +156,12 @@ const getCountryData = function (country) {
       if (!neighbour) return;
 
       // Country 2
-      // return fetch(`https://countries.dev/alpha/${neighbour}`);
-      return 23;
+      return fetch(`https://countries.dev/alpha/${neighbour}`);
     })
-    .then(data => alert(data));
+    .then(response => response.json())
+    .then(data => renderCountry(data, 'neighbour'));
 };
 
 getCountryData('portugal');
+// getCountryData('united states of america');
+// getCountryData('germany');
