@@ -156,9 +156,13 @@ const getCountryData = function (country) {
       if (!neighbour) return;
 
       // Country 2
-      return fetch(`https://countries.dev/alpha/${neighbour}`);
+      // return fetch(`https://countries.dev/alpha/${neighbour}`);
+
+      return fetch(`https://countries.dev/alpha/${neighbour}`).then(response =>
+        response.json(),
+      );
     })
-    .then(response => response.json())
+    // .then(response => response.json())
     .then(data => renderCountry(data, 'neighbour'));
 };
 
